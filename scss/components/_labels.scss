@@ -1,0 +1,27 @@
+form label{
+    font-size:1.8rem;
+    font-weight: 700; 
+}
+.required{
+    display:inline-block;
+    width:1.2rem;
+    height:1.2rem;
+	background-color: transparent;
+	background-attachment: scroll;
+    //back up icon image for browsers that do not support svgs
+    background:url("../images/required.png");
+    background-image: url("../images/required-icon.svg"), none;
+    background-size: 1.2rem 1.2rem;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    margin-right:0.3rem;
+}
+.form-text{
+    font-weight:700;
+    color:$gray-700;
+    margin-top:0rem !important;
+}
+.form-group{
+    margin-bottom:1.8rem !important;
+}

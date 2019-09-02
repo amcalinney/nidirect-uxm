@@ -1,0 +1,107 @@
+//main UXM colour palette
+$blue:hsl(206, 91%, 42%);// #0A78CD used to be #0a7ad0;
+$blue-lg: hsl(207, 69%, 89%);//table header colour #cee4f6
+$teal:hsl(206,85%,38%);//#0e6bb3;
+$green:hsl(121, 46%, 45%);// #3fa940;
+$red:hsl(358, 75%, 45%);// #c71c22;
+$white:hsl(0, 0%, 100%);//#ffffff;
+$black:hsl(0, 0%, 0%);//#000000;
+$orange:  #ffdb99;//for date picker
+//existing bootstrap palette
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$yellow:  #ffc107 !default;
+$cyan:    #17a2b8 !default;
+
+//greys
+
+//pagination active bg colour
+$gray-100:hsl(0, 0%, 96%);// #f5f5f5;
+//footer bg colour
+$gray-200: hsl(0, 0%, 94%);//#f0f0f0;
+//secondary button colour, pagination rollover colour, legend bottom border colour & jumbotron bg colour
+$gray-300: hsl(0, 0%, 90%);//#e6e6e6
+//not used
+$gray-400: hsl(0, 0%, 75%);//#bfbfbf
+//form input borders, radio and checkbox border & pagination border
+$gray-500: hsl(180, 1%, 58%);//#939595
+//pagination active text colour & disabled text colour
+$gray-600: hsl(0, 0%, 44%);//#707070
+//help text colour & table border colour
+$gray-700: hsl(0, 0%, 38%);//#626262
+//line separator
+$gray-800: hsl(0, 0%, 33%);//#555555;
+//for text
+$gray-900: hsl(0, 0%, 13%);//#222222;
+
+$grays: ();
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+// colours variations relating to components
+//button themes
+$primary:$blue;
+$secondary:$gray-300;
+$success:$green;
+$info:$gray-300;
+$warning:$red;
+$danger:$red;
+//navigation bar themes
+$light:$gray-300;
+$dark:$blue;
+//navigation & button rollovers
+$blue-dk:darken($blue, 10%);//#085d9f;
+$blue-dk-border:darken($blue, 12%);//#075896;
+$grey-dk:darken($gray-300, 7%);//#d5d5d5;
+$grey-dk-border:darken($gray-300, 9%);//#cfcfcf used to be rgba(0,0,0,0.1);
+$green-dk:darken($green, 10%);//#318432;
+$green-dk-border:darken($green, 12%);//#2e7c2f;
+$red-dk:darken($red, 10%);// #9a161a;
+$red-dk-border:darken($red, 12%);// #911419;
+$orange-dk:darken($orange, 10%);
+
+//jumbotron text colour
+$service-name-text-color:darken($blue, 6%);//#0869b3;
+$service-name-bg:$gray-300;
+
+$colors: () ;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+
+$theme-colors: () ;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+

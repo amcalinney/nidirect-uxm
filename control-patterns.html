@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Control patterns | User Experience Model (UXM) | nidirect</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.ico" />
+	<!-- Bootstrap -->
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+		<div class="container skip-link">
+                <a class="btn-skip-link" href="#main-content">Skip to content</a>
+            </div>
+	<header>
+		<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+						<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="principles.html">Principles</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="usability-testing.html">Usability testing</a>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-style" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Style guide
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-style"> <a class="dropdown-item" href="applying-uxm.html">Applying the UXM</a>
+										<a class="dropdown-item" href="writing-guide.html">Writing guide</a>
+										<a class="dropdown-item" href="page-layout.html">Page layout</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-control" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Controls
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-control"> <a class="dropdown-item" href="input-controls.html">Input controls <span class="sr-only">(current)</span></a>
+										<a class="dropdown-item" href="navigation-controls.html">Navigation controls</a>
+										<a class="dropdown-item" href="information-controls.html">Information controls</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-pattern" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Design patterns
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-pattern"> <a class="dropdown-item active" href="control-patterns.html">Control patterns<span class="sr-only">(current)</span></a>
+										<a class="dropdown-item" href="information-patterns.html">Information patterns</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav> <span class="nidirect-logo"><span class="sr-only">(n i direct government services)</span></span>
+		</div>
+		<!--service name-->
+		<div class="jumbotron jumbotron-fluid service-name">
+			<div class="container"> <span>User Experience Model (v3.0)</span>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<h1 id="main-content">Control Patterns</h1>
+			<ul>
+				<li> <a href="#login-registration">Log in/ registration </a>
+				</li>
+				<li> <a href="#address-lookup"> Address lookup </a> 
+				</li>
+				<li> <a href="#progress-trackers"> Progress trackers </a>
+				</li>
+				<li> <a href="#date-controls"> Date controls </a>
+				</li>
+				<li> <a href="#search-control"> Search control</a>
+				</li>
+			</ul>
+			<h2 class="uxm" id="login-registration">Log in/ Registration</h2>
+			<ul>
+				<li>Log in systems should only be built when absolutely necessary and must be approved in advance by the <a href="resources.html#contacts">nidirect Transactional Services Manager</a>
+				</li>
+				<li>Essential reading:<a href="https://www.gov.uk/service-manual/making-software/logins.html" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                        User accounts and logins (GOV.UK Service Design Manual)
+                        <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                    </a>
+				</li>
+			</ul>
+			<h3>Registration</h3>
+			<ul>
+				<li>Only information that is absolutely necessary to create an account should be requested</li>
+			</ul>
+			<form>
+				<fieldset>
+					<legend>About you</legend>
+					<div class="form-group">
+						<label class="control-label" for="ddl_title"><span class="required"><span class="sr-only">(required information)</span></span>Title</label>
+						<select id="ddl_title" class="form-control form-control-short" name="ddl_title">
+							<option value="0">--- Select ---</option>
+							<option value="Mr">Mr</option>
+							<option value="Mrs">Mrs</option>
+							<option value="Miss">Miss</option>
+							<option value="Ms">Ms</option>
+							<option value="Dr">Dr</option>
+							<option value="Other">None</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="forenames" class="control-label"><span class="required"><span class="sr-only">(required information)</span></span>Forename(s)</label>
+						<input id="forenames" class="form-control form-control-short" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="surname" class="control-label"><span class="required"><span class="sr-only">(required information)</span></span>Surname</label>
+						<input id="surname" class="form-control form-control-short" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="email" class="control-label"><span class="required"><span class="sr-only">(required information)</span></span>Email</label>
+						<input id="email" class="form-control form-control-short" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="contactno" class="control-label">Contact number</label>
+						<input id="contactno" class="form-control form-control-short" type="text" maxlength="50">
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>You password</legend>
+					<div class="form-group">
+						<label for="password" class="control-label"><span class="required"><span class="sr-only">(required information)</span></span>Password</label>
+						<input id="password" class="form-control form-control-short" type="text" maxlength="50">
+					</div>
+					<div class="form-group">
+						<label for="confirmpass"  class="control-label"><span class="required"><span class="sr-only">(required information)</span></span>Confirm password</label>
+						<input id="confirmpass" class="form-control form-control-short" type="text" maxlength="50">
+					</div>
+				</fieldset>
+			</form>
+			<button type="button" class="btn btn-primary">Create account</button>
+			<h3>Log in</h3>
+			<ul>
+				<li>Visitors should be presented with the option to register</li>
+				<li>There should be a clear link for visitors who have forgotten their username/password</li>
+				<li>Inline validation should be positioned below the inputs</li>
+				<li>Use example below, when appropriate</li>
+			</ul>
+			<div>
+				<form class="loginform">
+					<fieldset id="login">
+						<legend>Log in</legend>
+						<div class="form-group">
+							<label class="control-label" for="txt_email2">
+								<img class="required" src="images/required-icon.svg" alt="Required information">Email</label>
+							<input type="text" class="form-control" maxlength="50" id="txt_email2">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="txt_password">
+								<img class="required" src="images/required-icon.svg" alt="Required information">Password</label>
+							<input type="text" class="form-control" maxlength="50" id="txt_password">
+							<p class="forgot-password"> <a href="#">I've forgotten my username or password</a>
+							</p>
+						</div>
+						<div>
+							<button class="btn btn-primary" type="button">Log in</button>
+						</div>
+					</fieldset>
+					<fieldset id="register">
+						<legend>Register</legend>
+						<div>
+							<button id="create-account" class="btn btn-success" type="button">Create an account</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<h2 class="uxm" id="address-lookup">Address lookup</h2> 
+			<ul>
+				<li>The example below uses 'unobtrusive JavaScript' to present address / postcode lookup functionality</li>
+				<li>The lookup functionality is considered 'value-added' and is therefore only presented when JavaScript is available</li>
+				<li>The standard address fields can be completed with JavaScript off</li>
+				<li>Note the following code and components:</li>
+				<ul>
+					<li>The body element has a 'no-js' class</li>
+					<div id="accordion" class="accordion-code">
+						<div class="card">
+						  <div class="card-header" id="headingOne">
+							<h4 class="mb-0">
+							  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								<span class="fas"></span> 'no-js' html
+							  </button>
+							</h4>
+						  </div>
+					  
+						  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+							<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;body</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"no-js"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<li>The address lookup div is hidden using css (i.e. the div is hidden when JavaScript is not available)</li>
+<div id="accordion" class="accordion-code">
+	<div class="card">
+	  <div class="card-header" id="headingTwo">
+		<h4 class="mb-0">
+		  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			<span class="fas"></span>Hide lookup div CSS
+		  </button>
+		</h4>
+	  </div>
+  
+	  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+		<div class="card-body">					
+<pre><span style="color: #0000FF; font-weight: bold">.no-js</span> <span style="color: #008000; font-weight: bold">div</span><span style="color: #0000FF">#address-lookup</span> { <span style="color: #008000; font-weight: bold">display</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">none</span>; }
+</pre>
+</div>
+</div>
+</div>
+</div>
+<li>JQuery is used to remove the 'no-js' class (i.e. the div is shown when JavaScript is available)</li> 
+<div id="accordion" class="accordion-code">
+	<div class="card">
+	  <div class="card-header" id="headingThree">
+		<h4 class="mb-0">
+		  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			<span class="fas"></span> Remove 'no-js' JQuery
+		  </button>
+		</h4>
+	  </div>
+  
+	  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+		<div class="card-body">
+					<pre><span style="color: #366c6c; font-style: italic">// remove the no-js class</span>
+$(<span style="color: #BA2121">'body'</span>).removeClass(<span style="color: #BA2121">'no-js'</span>); 
+</pre>
+</div>
+</div>
+</div>
+</div>
+					<li>JQuery is used to show the select address input</li>
+					<div id="accordion" class="accordion-code">
+						<div class="card">
+						  <div class="card-header" id="headingFour">
+							<h4 class="mb-0">
+							  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								<span class="fas"></span> Show selected address JQuery
+							  </button>
+							</h4>
+						  </div>
+					  
+						  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+							<div class="card-body">
+<pre><span style="color: #666666">&lt;</span>script type<span style="color: #666666">=</span><span style="color: #BA2121">"text/javascript"</span><span style="color: #666666">&gt;</span>
+$(<span style="color: #008000">document</span>).ready(<span style="color: #008000; font-weight: bold">function</span> () {
+    $(<span style="color: #BA2121">'div#select-address'</span>).hide();
+    $(<span style="color: #BA2121">'button#find-address'</span>).click(<span style="color: #008000; font-weight: bold">function</span> () {
+        $(<span style="color: #BA2121">'div#select-address'</span>).fadeIn(<span style="color: #666666">800</span>);
+  });
+});
+<span style="color: #666666">&lt;</span><span>/script&gt; </span></pre>
+</div>
+</div>
+</div>
+</div>
+				</ul>
+			</ul>
+			<form>
+				<fieldset>
+					<legend>Address lookup example</legend>
+					<div class="form-group">
+						<label class="control-label label-inline" for="txt_postcode">Postcode <span class="help-block">To find your address please enter a valid NI postcode and select find address</span>
+						</label>
+						<div class="postcode-search">
+							<input type="text" class="form-control form-control-short input-inline" maxlength="50" id="txt_postcode" value="BT20 3JD">
+							<button class="btn btn-primary btn-inline" type="button" value="Find address" id="find-address">Find address</button>
+						</div>
+					</div>
+					<p>If you cannot find your address, or you live outside of Northern Ireland, please enter your details below.</p>
+					<div class="form-group" id="select-address">
+						<label class="control-label" for="choose-address">Select address</label>
+						<select id="choose-address" class="form-control" name="select-address">
+							<option value="0">--- Select ---</option>
+							<option value="1 Beechwood Gardens, Bangor BT20 3JD">1 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="2 Beechwood Gardens, Bangor BT20 3JD">2 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="3 Beechwood Gardens, Bangor BT20 3JD">3 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="4 Beechwood Gardens, Bangor BT20 3JD">4 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="5 Beechwood Gardens, Bangor BT20 3JD">5 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="6 Beechwood Gardens, Bangor BT20 3JD">6 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="7 Beechwood Gardens, Bangor BT20 3JD">7 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="8 Beechwood Gardens, Bangor BT20 3JD">8 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="9 Beechwood Gardens, Bangor BT20 3JD">9 Beechwood Gardens, Bangor BT20 3JD</option>
+							<option value="10 Beechwood Gardens, Bangor BT20 3JD">10 Beechwood Gardens, Bangor BT20 3JD</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="txt_address1">
+							<img class="required" src="images/required-icon.svg" alt="Required information">Address line 1<span class="help-block">Building name/number, street name</span>
+						</label>
+						<input type="text" class="form-control" maxlength="50" id="txt_address1">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="txt_address2">Address line 2</label>
+						<input type="text" class="form-control" maxlength="50" id="txt_address2">
+					</div>
+					<div class="form-group">
+						<img class="required" src="images/required-icon.svg" alt="Required information">
+						<label class="control-label" for="txt_towncity">City/Town</label>
+						<input type="text" class="form-control" maxlength="50" id="txt_towncity">
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="ddl_country"><span class="required"><span class="sr-only">(required information)</span></span>Country</label>
+						<select id="ddl_country" class="form-control form-control-short" name="ddl_country">
+							<option value="0">--- Select ---</option>
+							<optgroup label="Frequently used countries">
+								<option value="1">Northern Ireland</option>
+								<option value="2">England</option>
+								<option value="3">Scotland</option>
+								<option value="4">Wales</option>
+								<option value="5">Republic of Ireland</option>
+								<option value="6">Canada</option>
+								<option value="7">United States</option>
+							</optgroup>
+							<optgroup label="All countries">
+								<option value="1">Afganistan</option>
+								<option value="2">Andorra</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="txt_postcode2">
+							<img class="required" src="images/required.png" alt="Required information">Postcode</label>
+						<input type="text" class="form-control form-control-short" maxlength="50" id="txt_postcode2">
+					</div>
+				</fieldset>
+			</form>
+			<h2 class="uxm" id="progress-trackers">Progress trackers</h2>
+			<ul>
+				<li>Progress trackers are <strong>not</strong> mandatory, and must only used where the progress through the transaction is linear (ie no steps are skipped)</li>
+				<li>Used to guide the visitor through a number of steps to complete a specific process, typically a multi-step form or a checkout/payment process</li>
+				<li>Must be horizontally centered above the primary heading</li>
+				<li>Must not wrap to more than one line</li>
+				<li>Should be considered if there are 3 or more steps</li>
+				<li>If there are a large number steps (eg 8 or above) then you should reconsider the process/journey</li>
+				<li>If the page/window title and primary heading are repeated on each step of a multi-step form then the current step and total steps must be included</li>
+				<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingFive">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+							<span class="fas"></span> Title and heading html
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+						<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;title&gt;</span>Step 2 | Order a birth certificate | nidirect<span style="color: #008000; font-weight: bold">&lt;/title&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;h1</span> <span style="color: #687621">id=</span><span style="color: #BA2121">"skip-dest"</span><span style="color: #008000; font-weight: bold">&gt;</span>Order a birth certificate (Step 2 of 7)<span style="color: #008000; font-weight: bold">&lt;/h1&gt;</span> 
+</pre>
+</div>
+</div>
+</div>
+</div>
+				<li>The progress tracker can be hidden from view on the small and/or medium layouts if there is not enough screen real estate <strong>and</strong>
+					the primary heading contains both the current and total step numbers (eg Step 2 of 6)</li>
+				<li>Must use the visual styling as per the examples below</li>
+			</ul>
+			<h3>Labelled tracker</h3>
+			<p>A labelled tracker is preferred when:</p>
+			<ul>
+				<li>all steps can be easily defined using one or two words</li>
+				<li>visitors can easily guess the purpose of each step from its label</li>
+				<li>the steps follow a familiar or known convention (eg a checkout or payment process)</li>
+				<li>there are a small number of steps (eg 5 or less)</li>
+				<li>there is enough screen real estate to present each step without the progress tracker looking cluttered, confusing or wraps to additional lines</li>
+            </ul>
+            <h2 class="uxm">Insert labelled tracker DB</h2>
+			<h3>Numbered tracker</h3> 
+			<p>A numbered step tracker is preferred when:</p>
+			<ul>
+				<li>the individual steps cannot be easily defined using one or two words</li>
+				<li>visitors cannot easily guess the purpose of each step from its label</li>
+				<li>there are a large number of steps (eg 6 or more)</li>
+            </ul>
+            <h2 class="uxm">Insert number tracker DB</h2>
+            <h2 id="further-reading" class="uxm">Further reading</h2>
+			<ul>
+				<li> <a href="http://www.smashingmagazine.com/2010/01/15/progress-trackers-in-web-design-examples-and-best-design-practices/" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+					Progress trackers in web design: Examples and best practices (Smashing Magazine)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+                </li>
+                </ul>
+			<h2 class="uxm" id="date-controls">Date controls</h2> 
+			<p>Not all dates are the same. Choose a format appropriate for the kind of date you're asking about.</p>
+			<h3>Memorable dates</h3> 
+			<p>For capturing memorable dates like dates of birth, the simplest option is to provide inputs to select the day and month, and then a text field to type in the year.</p>
+			<form>
+				<div class="form-date form-group">
+					<fieldset>
+						<legend>Memorable date example</legend>
+						<label class="control-label">Date of birth</label>
+						<div class="date-inline">
+							<div id="txtdob" class="form-date-day">
+								<label class="help-block" for="day">Day</label>
+								<select id="day" class="form-control" onchange="" name="day">
+									<option value="0">—</option>
+									<option value="01">1</option>
+									<option value="02">2</option>
+									<option value="03">3</option>
+									<option value="04">4</option>
+									<option value="05">5</option>
+									<option value="06">6</option>
+									<option value="07">7</option>
+									<option value="08">8</option>
+									<option value="09">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+							</div>
+							<div class="form-date-month-memorable">
+								<label class="help-block" for="month-memorable">Month</label>
+								<select id="month-memorable" class="form-control" onchange="" name="month1">
+									<option value="0">—</option>
+									<option value="01">January</option>
+									<option value="02">February</option>
+									<option value="03">March</option>
+									<option value="04">April</option>
+									<option value="05">May</option>
+									<option value="06">June</option>
+									<option value="07">July</option>
+									<option value="08">August</option>
+									<option value="09">September</option>
+									<option value="10">October</option>
+									<option value="11">November</option>
+									<option value="12">December</option>
+								</select>
+							</div>
+							<div class="form-date-year">
+								<label class="help-block" for="year-memorable">Year</label>
+								<input id="year-memorable" class="form-control" type="text" placeholder="YYYY" maxlength="4" name="year1" autocomplete="off">
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</form>
+			<h3>Approximate dates</h3>
+			<p>If you don't need an exact date and users are likely to struggle to remember it (for example the date you started your first job), make sure you allow users to enter approximate dates like 'June 1996'.</p>
+			<form>
+				<fieldset>
+					<legend>Approximate dates example</legend>
+					<label>Job start date</label>
+					<div class="date-inline">
+						<div class="form-date-month">
+							<label class="help-block" for="month-approximate">Month</label>
+							<select id="month-approximate" class="form-control" onchange="" name="month1">
+								<option value="0">—</option>
+								<option value="01">January</option>
+								<option value="02">February</option>
+								<option value="03">March</option>
+								<option value="04">April</option>
+								<option value="05">May</option>
+								<option value="06">June</option>
+								<option value="07">July</option>
+								<option value="08">August</option>
+								<option value="09">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</select>
+						</div>
+						<div class="form-date-year">
+							<label for="year-approximate" class="help-block" for="year-approximate">Year</label>
+							<input id="year-approximate" class="form-control" type="text" placeholder="YYYY" maxlength="4" name="year1" autocomplete="off">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<h3>Calendar controls</h3>
+			<form>
+				<fieldset>
+					<legend>Calendar control example</legend>
+					<label for="cal-control">Choose a date</label>
+					<div class="input-group date">
+						<input type="text" class="form-control form-control-short" id="cal-control">
+						<button type="button" class="btn btn-primary"> <span class="fas fa-calendar-alt"></span>
+						</button>
+					</div>
+				</fieldset>
+			</form>
+			<h3>Formatting dates</h3>
+			<p>The default date format to use is this one:</p>
+			<ul>
+				<li>8 July 2014</li>
+			</ul>
+			<p>Periods of time should be formatted like this:</p>
+			<ul>
+				<li>8 July to 9 August</li>
+			</ul>
+			<h2 class="uxm" id="search-control">Search Control</h2>
+			<ul>
+				<li>The input control and button are styled differently to other controls</li>
+				<li>A smaller button and embedded label allows for a wider search control in a constrained space</li>
+				<li>Always use the 'glyphicon-search' icon; the magnifying-glass icon is one of the few icons which has universal recognition from users</li>
+				<li>Developers may use a wider input control when the anticipated search terms exceed 20 characters</li>
+			</ul>
+			<form>
+				<fieldset>
+					<legend>Search box example</legend>
+					<div class="input-group">
+						<label class="element-invisible" for="search">Text input example</label>
+						<input id="search" type="text" class="form-control form-control-short" placeholder="Search">
+						<button type="button" class="btn btn-primary"> <span class="fas fa-search"></span>
+						</button>
+					</div>
+				</fieldset>
+			</form>
+			<br>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<ul class="list-inline">
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="resources.html">
+                               Resources
+                            </a>
+				</li>
+				<li class="list-inline-item"> <a href="accessibility.html">
+                               Accessibility
+                          </a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+	<script src="js/controls-uxm.js"></script>
+	<script src="js/datepicker/bootstrap-datepicker.js"></script>
+	<script src="js/datepicker/bootstrap-datepicker.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          .8rem ;
+$table-border-color:          $gray-700;
+$table-head-bg:               $blue-lg;
+$table-head-color:            $gray-900;
+
+.table{
+    margin-bottom: 2.7rem !important;
+}
+
+.table-bordered thead th{
+    border-bottom-width: 1px !important;
+}
+
+.table-bordered tr th{
+    background-color:$blue-lg;
+}

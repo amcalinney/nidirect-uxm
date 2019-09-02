@@ -1,0 +1,15 @@
+
+fieldset{
+    /* margin-bottom: 1.8rem !important; */
+    legend{
+        font-size: 2.7rem;
+        margin-bottom:2.7rem;
+        border-bottom:1px solid $gray-300;
+    }
+    legend.legend-label{ //used to label checkboxes and radio button groups but styled as a regular label
+        font-size:1.8rem;
+        font-weight: 700;
+        margin-bottom:0.5rem;
+        border-bottom:none;
+    }
+}

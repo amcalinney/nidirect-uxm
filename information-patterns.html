@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Information patterns | User Experience Model (UXM) | nidirect</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.ico" />
+	<!-- Bootstrap -->
+	<!--  <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">  -->
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container skip-link">
+        <a class="btn-skip-link" href="#main-content">Skip to content</a>
+    </div>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="principles.html">Principles</a>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="usability-testing.html">Usability testing</a>
+						</li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-style" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Style guide
+                         </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown-style"> <a class="dropdown-item" href="applying-uxm.html">Applying the UXM</a>
+								<a class="dropdown-item" href="writing-guide.html">Writing guide</a>
+								<a class="dropdown-item" href="page-layout.html">Page layout</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-control" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Controls
+                         </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown-control"> <a class="dropdown-item" href="input-controls.html">Input controls <span class="sr-only">(current)</span></a>
+								<a class="dropdown-item" href="navigation-controls.html">Navigation controls</a>
+								<a class="dropdown-item" href="information-controls.html">Information controls</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-pattern" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Design patterns
+                         </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown-pattern"> <a class="dropdown-item" href="control-patterns.html">Control patterns</a>
+								<a class="dropdown-item active" href="information-patterns.html">Information patterns <span class="sr-only">(current)</span></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav> <span class="nidirect-logo"><span class="sr-only">(n i direct government services)</span></span>
+		</div>
+		<!--service name-->
+		<div class="jumbotron jumbotron-fluid service-name">
+			<div class="container"> <span>User Experience Model (v3.0)</span>
+			</div>
+		</div>
+	</header>
+	<main id="main">
+		<div class="container">
+            <h1 id="main-content">Information patterns</h1>
+
+        <ul>
+            <li>
+                <a href="#summary-info">Summary information</a>
+            </li>
+            <li>
+                <a href="#app-summary">Application summary</a>
+            </li>
+            <li>
+                <a href="#error-pages">Error pages</a>
+            </li>
+        </ul>
+
+        <h2 id="summary-info" class="uxm">Summary information</h2>
+        <ul>
+            <li>
+                Uses description lists to display snippets of information about the user</li>
+                <div id="accordion" class="accordion-code">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                    <h4 class="mb-0">
+                      <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      <span class="fas"></span> Description list html
+                      </button>
+                    </h4>
+                    </div>
+                  
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+<pre><code><span style="color: #008000; font-weight: bold">&lt;h4</span> <span style="color: #7D9029">id=</span><span style="color: #BA2121">&quot;list-summaryInformation&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>About the applicant<span style="color: #008000; font-weight: bold">&lt;/h4&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;dl</span> <span style="color: #7D9029">title=</span><span style="color: #BA2121">&quot;About the applicant&quot;</span> <span style="color: #7D9029">aria-labelledby=</span><span style="color: #BA2121">&quot;list-summaryInformation&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;dt&gt;</span>Name<span style="color: #008000; font-weight: bold">&lt;/dt&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;dd&gt;</span>Mr Joe Smyth<span style="color: #008000; font-weight: bold">&lt;/dd&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;dt&gt;</span>Address<span style="color: #008000; font-weight: bold">&lt;/dt&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;dd&gt;</span>2 Beechwood Gardens, Bangor, BT20 3JD<span style="color: #008000; font-weight: bold">&lt;/dd&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;dt&gt;</span>Email<span style="color: #008000; font-weight: bold">&lt;/dt&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;dd&gt;</span>joe.smyth@gmail.com<span style="color: #008000; font-weight: bold">&lt;/dd&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/dl&gt;</span>
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+            <li>The information must be displayed in an easily digestible format eg name and address fields should be concatenated</li>
+        </ul>
+<h3>Summary information example</h3>
+        <h4 id="list-summaryInformation">About the applicant</h4>
+        <dl title="About the applicant" aria-labelledby="list-summaryInformation">
+          <dt>Name</dt>
+          <dd>Mr Joe Smyth</dd>
+          <dt>Address</dt>
+          <dd>2 Beechwood Gardens, Bangor, BT20 3JD</dd>
+          <dt>Email</dt>
+          <dd>joe.smyth@gmail.com</dd>
+        </dl>
+        <h2 id="app-summary" class="uxm">Application summary</h2>
+        <ul>
+            <li>An application summary is used to display all the information that a user has entered</li>
+            <li>The title of the summary should not given the impression that the information has already been submitted eg use "Review your answers"</li>
+            <li>The summary must not display sections which have been skipped within the application - or questions that have not been answered</li>
+            <li>The information displayed must displayed in the order that it was provided and must not be concatenated</li>
+            <li>Depending on the length of the application and the amount of information being presented in the summary, developers should decide on whether to present the summary information using an accordian control</li>
+        </ul>
+        <h3>Application summary example</h3>
+        <h4 id="list-summary-applicant">About the applicant</h4>
+        <dl title="About the applicant" class="list-summary" aria-labelledby="list-summary-applicant">
+          <dt>Title</dt>
+          <dd>Mr</dd>
+          <dt>Forename</dt>
+          <dd>Joe</dd>
+          <dt>Surname</dt>
+          <dd>Smyth</dd>
+          <dt>Contact number</dt>
+          <dd>07752123456</dd>
+          <dt>Email</dt>
+          <dd>joe.smyth@gmail.com</dd>
+        </dl>
+        <h4 id="list-summary-property">About your property</h4>
+        <dl title="About your property" class="list-summary" aria-labelledby="list-summary-property">
+          <dt>Address line 1</dt>
+          <dd>2 Beechwood Gardens</dd>
+          <dt>Town/city</dt>
+          <dd>Bangor</dd>
+          <dt>Postcode</dt>
+          <dd>BT20 3JD</dd>
+          <dt>Council district</dt>
+          <dd>Ards and North Down</dd>
+        </dl>
+        <h4 id="list-summary-questions">Questions relating to your application</h4>
+        <dl title="Questions relating to your application" class="list-summary" aria-labelledby="list-summary-questions">
+          <dt>Are you aware of any legal reason why you may not apply for this position?</dt>
+          <dd>No</dd>
+          <dt>Do you hold any points on your current driving licence?</dt>
+          <dd>No</dd>
+          
+        </dl>
+
+                <h3>Application summary example (with accordion)</h3>
+                <div id="accordion" class="accordion">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h4 class="mb-0">
+                          <button class="btn-accordion" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            About the applicant<span title="show" class="fas"></span>
+                          </button>
+                        </h4>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                          <dl class="list-summary">
+                            <dt>Title</dt>
+                            <dd>Mr</dd>
+                            <dt>Forename</dt>
+                            <dd>Joe</dd>
+                            <dt>Surname</dt>
+                            <dd>Smyth</dd>
+                            <dt>Contact number</dt>
+                            <dd>07752123456</dd>
+                            <dt>Email</dt>
+                            <dd>joe.smyth@gmail.com</dd>
+                          </dl>               </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h4 class="mb-0">
+                          <button class="btn-accordion  collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            About your property<span class="fas"></span>
+                          </button>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                          <dl class="list-summary">
+                            <dt>Address line 1</dt>
+                            <dd>2 Beechwood Gardens</dd>
+                            <dt>Town/city</dt>
+                            <dd>Bangor</dd>
+                            <dt>Postcode</dt>
+                            <dd>BT20 3JD</dd>
+                            <dt>Council district</dt>
+                            <dd>Ards and North Down</dd>
+                          </dl>               </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h4 class="mb-0">
+                          <button class="btn-accordion collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Questions relating to your application<span class="fas"></span>
+                          </button>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                          <dl class="list-summary">
+                            <dt>Are you aware of any legal reason why you may not apply for this position?</dt>
+                            <dd>No</dd>
+                            <dt>Do you hold any points on your current driving licence?</dt>
+                            <dd>No</dd>
+                          </dl>                </div>
+                      </div>
+                    </div>
+                  </div>
+               
+        <h2 id="error-pages" class="uxm">Error pages</h2>
+        <ul>
+            <li>every error, regardless of who is to blame, results in a bad user experience</li>
+            <li>effectively designed error pages can help to nullify that experience</li>
+            <li>error messages should sound like they are written by humans - for humans</li>
+            <li>where possible, an error page should give the user options on what to do next</li> 
+        </ul>
+
+        <h3>Not found (404) error message</h3>
+        <p>The 404 or 'not found' error message is an HTTP standard response code indicating that the client was able to communicate with a given server, but the server could not find what was requested. The web site hosting server will typically generate a "404 Not Found" web page when a user attempts to follow a broken or dead link</p>
+        <figure class="figure">
+            <img class="img-fluid mx-auto d-block" src="images/error-404.png" alt="Sample text for a not found (404) error message">
+            <figcaption>Image: sample text for a not found (404) error message</figcaption>
+        </figure>
+
+        <h3>Internal server (500) error message</h3>
+        <p>The 500 or 'internal server' error message is an error generated by the Web server. It basically means something has gone wrong, but the server cannot be more specific about the error condition in its response to the client. In addition to the 500 error notified back to the client, the Web server should generate some kind of internal error log which gives more details of what went wrong.</p>
+        <figure class="figure">
+        <img class="img-fluid mx-auto d-block" src="images/error-500.png" alt="Sample text for an internal server (500) error message">
+        <figcaption>Image: sample text for an internal server (500) error message</figcaption>
+    </figure>
+        <h3>Session error message</h3>
+        <p>
+            The session error message will appear after a defined period of client inactivity, or in cases when the user attempts to click the back button after a transaction is complete. Guidance provided by OWASP on
+            <a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet#Session_Expiration" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                session expiration<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+            </a>
+            recommends that the period of client inactivity should be dependent on how critical the web application and its data are, and can range from 2 to 5 minutes for high-value applications to 15 to 30 minutes for low risk applications.
+        </p>
+        <figure class="figure">
+        <img class="img-fluid mx-auto d-block" src="images/sessionerror.png" alt="Sample text for a session error message">
+        <figcaption>Image: sample text for a session error message</figcaption>
+    </figure>
+        
+
+        <h3>General error message</h3>
+        <p>The general error message is designed to cover 'catch-all' errors not covered by either the 404 or 500 error messages.</p>
+        <figure class="figure">
+        <img class="img-fluid mx-auto d-block" src="images/error.png" alt="Sample text for a general error message">
+        <figcaption>Image: sample text for a general error message</figcaption>
+    </figure>
+
+
+
+   
+
+  
+    
+    
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<ul class="list-inline">
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="resources.html">
+                               Resources
+                            </a>
+				</li>
+				<li class="list-inline-item"> <a href="accessibility.html">
+                               Accessibility
+                          </a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+</body>
+
+</html>

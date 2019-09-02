@@ -1,0 +1,213 @@
+//variables associated with navigation menu
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   .5rem ;
+$dropdown-bg:                       $white;
+
+$dropdown-link-color:               $gray-900;
+$dropdown-link-hover-color:         $white;
+$dropdown-link-hover-bg:            $blue;
+
+$dropdown-link-active-color:        $white;
+$dropdown-link-active-bg:           $blue-dk;
+
+$dropdown-item-padding-y:           .3rem;
+$dropdown-item-padding-x:           2rem;
+
+$dropdown-header-color:             $blue-dk;
+
+// Navs
+$nav-tabs-border-color:             $gray-500;
+$nav-tabs-link-hover-border-color:  $nav-tabs-border-color;
+$nav-tabs-link-active-color:        $gray-900;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color $white;
+
+$nav-pills-link-active-color:       $white;
+$nav-pills-link-active-bg:          $blue-dk;
+
+$navbar-dark-color:                 $white;
+$navbar-dark-hover-color:           $white;
+$navbar-dark-active-color:          $white;
+$navbar-dark-disabled-color:        $gray-600;
+$navbar-dark-toggler-border-color:  $blue-dk;
+
+$nav-link-padding-y:                0rem;
+$nav-link-padding-x:                0rem;
+
+// Navbar
+
+$navbar-padding-y:                  0rem;
+$navbar-padding-x:                  0rem;
+
+$navbar-nav-link-padding-x:         1.2rem;
+
+$navbar-brand-font-size:            1.8rem;
+
+$navbar-toggler-padding-y:          .7rem;
+$navbar-toggler-padding-x:          1rem;
+$navbar-toggler-font-size:          2.4rem;
+
+//end of variables
+
+
+header{
+  .container{
+    position:relative;
+  }
+  .nidirect-logo-only{
+    display:inline-block;
+    position: relative;
+    width:133px;
+    width:13.3rem;
+    height:32px;
+    height:3.2rem;
+    background-color: transparent;
+    //back up icon image for browsers that do not support svgs
+    background:url("../images/nidirect-logo.png");
+    background-image: url("../images/nidirect-logo.svg"), none;
+    background-size: auto auto;
+    background-position-x: 0;
+    background-position-y: 0;
+    padding-right:133px;
+    padding-right:13.3rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-repeat: no-repeat;
+    margin-top:14px;
+    margin-top:1.4rem ;
+    margin-bottom:14px;
+    margin-bottom:1.4rem ;
+    line-height: 0;
+  }
+  .nidirect-logo{
+    display:inline-block;
+    position: absolute;
+    top:0;
+    right:1.5rem;
+    width:133px;
+    width:13.3rem;
+    height:32px;
+    height:3.2rem;
+    background-color: transparent;
+    //back up icon image for browsers that do not support svgs
+    background:url("../images/nidirect-logo.png");
+    background-image: url("../images/nidirect-logo.svg"), none;
+    background-size: auto auto;
+    background-position-x: 0;
+    background-position-y: 0;
+    padding-right:133px;
+    padding-right:13.3rem;
+    padding-bottom: 0;
+    padding-top: 0;
+    background-repeat: no-repeat;
+    margin-top:14px;
+    margin-top:1.4rem ;
+    margin-bottom:14px;
+    margin-bottom:1.4rem ;
+  }
+}
+
+.navbar-nav, .navbar, header{
+  background-color: $blue;
+  color: $white;
+}
+
+.navbar{
+  padding: 0;
+  display: inline-block;
+}
+
+.navbar .navbar-toggler{
+  margin:1rem 0rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+  color: $white;
+}
+   
+.navbar-dark .navbar-nav
+  .nav-link:hover {
+    color: $white;
+  }
+.nav-item .dropdown-menu{
+  margin:0 0 0 0 ;
+}
+
+.nav-item.dropdown.show{
+  background-color: $blue-dk;
+}
+
+.dropdown-item:hover, .navbar-dark .navbar-nav .nav-link:focus{
+  color: $white;
+}
+
+.nav-item.active, .nav-link:hover, .dropdown-item:hover{
+  background-color: $blue-dk;
+}
+
+li.nav-item{
+  padding-bottom: 0rem;
+}
+
+.dropdown-menu.show a.dropdown-item:not(:last-of-type) {
+  margin-bottom:0.6rem;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1.65rem 1.2rem;
+ }
+
+//tabs
+.nav-tabs .nav-item.nav-link{
+  padding: .9rem 1.8rem;
+  border-color: $gray-500;
+  border-radius:.5rem .5rem 0 0;
+  margin-right:.2rem;
+  background-color:$gray-100;
+}
+
+.nav-tabs .nav-item.nav-link:not(:nth-of-type(1)){
+  border-width: 1px 1px 1px 1px;
+}
+.nav-tabs .nav-item:hover{
+  background-color: $gray-300;
+}
+.nav-tabs .nav-item:active{
+  background-color: $white;
+}
+
+.tab-content{
+  border-width: 0px 1px 1px 1px;
+  border-color:$gray-500;
+  border-style: solid;
+  padding:1.8rem;
+}
+
+
+//styling of navigation or smaller screen size
+@media screen and (max-width: 992px){
+  .navbar-nav .nav-item:not(:last-child){
+    border-bottom: 1px solid $white;
+  }
+  .navbar-expand-lg .navbar-nav .nav-item .nav-link {
+    padding: 1.2rem 1rem;
+   }
+   .dropdown-menu.show .dropdown-item, .dropdown-item:hover, .navbar-dark .navbar-nav .nav-link:focus{
+    color: $white;
+  }
+  .dropdown-menu.show .dropdown-item:hover{
+    color: $white;
+    background-color: $blue-dk;
+  }
+  .dropdown-menu.show{
+    color:$white;
+    background-color:$blue;
+    border:0;
+    box-shadow: none;
+  }
+
+}

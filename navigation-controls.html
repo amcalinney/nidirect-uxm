@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Navigation Controls | User Experience Model (UXM) | nidirect</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.ico" />
+	<!-- Bootstrap -->
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+		<div class="container skip-link">
+				<a class="btn-skip-link" href="#main-content">Skip to content</a>
+			</div>
+	<header>
+		<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+						<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="principles.html">Principles</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="usability-testing.html">Usability testing</a>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-style" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Style guide
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-style"> <a class="dropdown-item active" href="applying-uxm.html"></a>
+										<a class="dropdown-item" href="writing-guide.html">Writing guide</a>
+										<a class="dropdown-item" href="page-layout.html">Page layout</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-control" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										Controls
+										<span class="sr-only">(current)</span></a>
+								 <div class="dropdown-menu" aria-labelledby="navbarDropdown-control"> <a class="dropdown-item" href="input-controls.html">Input controls</a>
+									 <a class="dropdown-item active" href="navigation-controls.html">Navigation controls<span class="sr-only">(current)</span></a>
+									 <a class="dropdown-item" href="information-controls.html">Information controls</a>
+								 </div>
+							 </li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-pattern" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Design patterns
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-pattern"> <a class="dropdown-item" href="control-patterns.html">Control patterns</a>
+										<a class="dropdown-item" href="information-patterns.html">Information patterns</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav> <span class="nidirect-logo"><span class="sr-only">(n i direct government services)</span></span>
+		</div>
+		<!--service name-->
+		<div class="jumbotron jumbotron-fluid service-name">
+			<div class="container"> <span>User Experience Model (v3.0)</span>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<h1 id="main-content">Navigation Controls</h1>
+			<ul>
+				<li> <a href="#buttons">Buttons</a>
+				</li>
+				<li> <a href="#links"> Links </a> 
+				</li>
+				<li> <a href="#skip-navigation"> Skip navigation </a>
+				</li>
+				<li> <a href="#pagination"> Pagination</a>
+				</li>
+			</ul>
+			<h2 id="buttons" class="uxm">Buttons</h2>
+			<ul>
+				<li>Buttons should be used sparingly</li>
+				<li>The font size of the standard button must equate to 18px (set using relative units)</li>
+				<li>Form reset buttons must not be used</li>
+				<li>Previous and next buttons in a wizard step should be positioned on the left</li>
+				<li>Classes can be applied to inputs, buttons and anchors</li>
+				<li>Use the 'btn-large' class for large buttons (font size equates to 20px)</li>
+				<li>Use the 'btn-small' class for small buttons (font size equates to 14px)</li>
+				<li>Buttons should be styled using the bootstrap 4 naming conventions (ie Primary, Secondary, Call to Action etc)</li>
+			</ul>
+			<div id="accordion" class="accordion-code">
+				<div class="card">
+				  <div class="card-header" id="headingOne">
+					<h4 class="mb-0">
+					  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						<span class="fas"></span>Button html
+					  </button>
+					</h4>
+				  </div>
+			  
+				  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">		
+<pre><code><span style="color:#008000; font-weight: bold">&lt;button</span><span style="color: #687621"> type=</span><span style="color: #BA2121">"button"</span><span style="color: #687621"> class=</span><span style="color: #BA2121">"btn btn-primary"</span><span style="color:#008000; font-weight: bold">&lt;/button</span><span style="color: #008000; font-weight: bold">&gt;</span></code></pre></code>	
+</div>
+</div>
+</div>
+</div>
+			<h3>Primary button</h3>
+			<ul>
+				<li>The blue button is the primary button used for positive form actions such as 'log in', 'next' or 'continue' in a wizard or 'submit' or 'finish' at the end of the process</li>
+				<li>Avoid having multiple primary form actions on a single page</li>
+			</ul>
+			<button type="button" class="btn btn-primary">Primary</button>
+			<h3>Secondary button</h3>
+			<ul>
+				<li>The grey button should be used for secondary actions such as returning to a previous step</li>
+				<li>There can be multiple secondary actions on a single page</li>
+			</ul>
+			<button type="button" class="btn btn-secondary">Secondary</button>
+			<h3>Call to action button</h3>
+			<ul>
+				<li>The green button is the 'call to action' button</li>
+				<li>It should be used sparingly in a transactional service and should never be used more than once on a page</li>
+				<li>It should only be used to bring the user's attention to the key action of that page where other competing actions can be safely ignored</li>
+				<li>Directional arrows should only be used in exceptional cases</li>
+				<li>Examples include 'Start now' or 'Create an account'</li>
+				<li>Can be implemented using either the UXM semantic class name (btn-call-to-action) or the Bootstrap class name (btn-success)</li>
+			</ul>
+			<button type="button" class="btn btn-success">Call to action</button>
+			<h3>Warning button</h3>
+			<ul>
+				<li>The red button should be used for actions that are irreversible, such as delete</li>
+				<li>Position them away from the other actions</li>
+				<li>Make the action reversible / 'undoable' or if that isn't possible, use an alert to check that the user really wants to do this</li>
+			</ul>
+			<button type="button" class="btn btn-danger">Warning</button>
+			<h3>Directional buttons</h3>
+			<ul>
+				<li>Should be used to signify moving back and forward through a process eg a checkout process, or registration steps</li>
+				<li>Use the 'arrowr' or 'arrowl' class to include the appropriate directional arrow</li>
+			</ul>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">Button</th>
+						<th scope="col">Usage</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<button type="button" class="btn btn-primary">Next <span class="fas fa-chevron-right"></span>
+							</button>
+						</td>
+						<td>Should be used to move to the next step in a wizard or stepped process.</td>
+					</tr>
+					<tr>
+						<td>
+							<button type="button" class="btn btn-secondary"><span class="fas fa-chevron-left"></span> Back
+							</button>
+						</td>
+						<td>Should be used to move to the previous step in a wizard or stepped process.</td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingTwo">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<span class="fas"></span>Directional button html
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">		
+	<pre><code><span style="color:#008000; font-weight: bold">&lt;button</span><span style="color: #687621"> type=</span><span style="color: #BA2121">"button"</span><span style="color: #687621"> class=</span><span style="color: #BA2121">"btn btn-primary"</span><span style="color: #008000; font-weight: bold">&gt;</span>Next <span style="color:#008000; font-weight: bold">&lt;span</span><span style="color: #687621"> class=</span><span style="color: #BA2121">"fas fa-chevron-right"</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color:#008000; font-weight: bold">&lt;/span</span><span style="color:#008000; font-weight: bold">&lt;/button</span><span style="color: #008000; font-weight: bold">&gt;</span></code></pre></code>	
+	</div>
+	</div>
+	</div>
+	</div>
+			<h3>Further reading</h3>
+			<ul>
+				<li> <a href="http://getlevelten.com/blog/randall-knutson/design-decisions-buttons-vs-links-fight" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Design Decisions:Buttons vs Links. Fight! (Level Ten Interactive)<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+				</li>
+			</ul>
+			<h2 class="uxm" id="links">Links</h2>
+			<ul>
+				<li>Links that break session or affect the flow or customer journey should be avoided</li>
+				<li>Links to websites other than nidirect.gov.uk should be avoided where possible</li>
+				<li>Links to other sites that cannot be avoided and break user session:
+					<ul>
+						<li>must open in a new browser window</li>
+						<li>must include the <a href="new-window-icon.svg" title="(external link opens in new window/tab)">new window icon
+                        <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span></a>
+						</li>
+						<li>must include appropriate text in the title attribute</li>
+					</ul>
+				</li>
+				<li>Links should not be self referencing</li>
+				<li>Links:
+				<ul>
+					<li>must not be underlined</li>
+					<li>must be underlined on hover</li>
+					<li>must be coloured #0e6bb3</li>
+					<li>must be coloured #08416c on hover</li>
+                </ul>
+                </li>
+			</ul>
+			<h3>Further reading</h3>
+			<ul>
+				<li> <a href="https://www.w3.org/TR/WCAG-TECHS/H33.html" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Supplementing link text with the title attribute (W3C)<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+				</li>
+				<li> <a href="http://getlevelten.com/blog/randall-knutson/design-decisions-buttons-vs-links-fight" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Design Decisions:Buttons vs Links. Fight! (Level Ten Interactive)<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+				</li>
+			</ul>
+			<h2 class="uxm" id="skip-navigation">Skip navigation</h2>
+			<ul>
+				<li>Must be used to give screen reader and keyboard users the option to bypass recurring navigation or repeated blocks of content (eg top navigation, branding, progress tracker etc)</li>
+				<li>The link must be positioned at the top of the page</li>
+				<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingThree">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<span class="fas"></span>Skip link HTML
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+						<div class="card-body">
+<pre><code><span style="color:#008000; font-weight: bold">&lt;div</span><span style="color: #687621"> class=</span> <span style="color: #BA2121">"skip-link"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"element-invisible element-focusable"</span> <span style="color: #687621">href=</span><span style="color: #BA2121">"#main-content"</span><span style="color: #008000; font-weight: bold">&gt;</span>Skip to content<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/div&gt;</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+				
+<li>The skip link destination should be the primary heading</li>
+				<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingFour">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							 <span class="fas"></span>Skip link destination HTML
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+						<div class="card-body">
+<pre><code><span style="color: #008000; font-weight: bold">&lt;h1</span> <span style="color: #687621">id=</span><span style="color: #BA2121">"main-content"</span><span style="color: #008000; font-weight: bold">&gt;</span>Navigation controls<span style="color: #008000; font-weight: bold">&lt;/h1&gt;</span></code></pre> 
+</div>
+</div>
+</div>
+</div>
+				<li>The link must be hidden using css and should become visible with keyboard focus</li>
+
+				<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingFive">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+							<span class="fas"></span>Keyboard focus CSS
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+						<div class="card-body">
+	<pre><span style="color: #0000FF; font-weight: bold">.element-invisible</span><span style="color: #666666">,</span> <span style="color: #0000FF; font-weight: bold">.element-focusable</span> {
+	<span style="color: #008000; font-weight: bold">    clip</span><span style="color: #666666">:</span> rect(<span style="color: #666666">1px,</span> <span style="color: #666666">1px,</span> <span style="color: #666666">1px,</span> <span style="color: #666666">1px</span>);
+	<span style="color: #008000; font-weight: bold">    height</span><span style="color: #666666">:</span> <span style="color: #666666">1px</span>;
+	<span style="color: #008000; font-weight: bold">    overflow-x</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">hidden</span>;
+	<span style="color: #008000; font-weight: bold">    overflow-y</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">hidden</span>;
+	<span style="color: #008000; font-weight: bold">    position</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">absolute</span> <span style="color: #BC7A00">!important</span>;
+	<span style="color: #008000; font-weight: bold">    width</span><span style="color: #666666">:</span> <span style="color: #666666">1px</span>;
+	 }
+	<span style="color: #0000FF; font-weight: bold">.element-focusable</span><span style="color: #AA22FF">:active</span><span style="color: #666666">,</span> <span style="color: #0000FF; font-weight: bold">.element-focusable</span><span style="color: #AA22FF">:focus</span> {
+	<span style="color: #008000; font-weight: bold">    clip</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">auto</span>;
+	<span style="color: #008000; font-weight: bold">    height</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">auto</span>;
+	<span style="color: #008000; font-weight: bold">    overflow-x</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">auto</span>;
+	<span style="color: #008000; font-weight: bold">    overflow-y</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">auto</span>;
+	<span style="color: #008000; font-weight: bold">    position</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #BC7A00">!important</span>;
+	<span style="color: #008000; font-weight: bold">    width</span><span style="color: #666666">:</span> <span style="color: #008000; font-weight: bold">auto</span>;
+	}
+	 </pre>             </div>
+	</div>
+	</div>
+	</div>
+		</ul>
+			<h3>Further reading</h3>
+			<ul>
+				<li> <a href="https://webaim.org/techniques/skipnav/#focus" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Skip navigation links - Links that become visible with keyboard focus (Web AIM)<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+				</li>
+				<li> <a href="https://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G1" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Adding a link at the top of each page that goes directly to the main content area (W3C)<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+				</li>
+			</ul>
+			<h2 class="uxm" id="pagination">Pagination</h2>
+			<ul>
+				<li>long lists of similar looking data, such as search results, are difficult to make sense of</li>
+				<li>present the data grouped across multiple pages, with a consistent number of items per page</li>
+				<li>the number of items per page should be considered on a case by case basis</li>
+				<li>provide an easy to use set of controls to navigate the pages</li>
+				<li>display how many items make up the overall data set, how many pages the items are broken up into, and which page is currently being viewed.</li>
+				<li>first and last links are confusing and should not be used</li>
+</ul>
+			<h3>First page</h3>
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item disabled"><a class="page-link" href="#">Previous</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">2</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">Next</a>
+					</li>
+				</ul>
+			</nav>
+			<h3>Middle page</h3>
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item "><a class="page-link" href="#">Previous</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="#">2</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">Next</a>
+					</li>
+				</ul>
+			</nav>
+			<h3>Last page</h3>
+			<nav aria-label="Page navigation example">
+				<ul class="pagination">
+					<li class="page-item "><a class="page-link" href="#">Previous</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">1</a>
+					</li>
+					<li class="page-item"><a class="page-link" href="#">2</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="#">3</a>
+					</li>
+					<li class="page-item disabled"><a class="page-link" href="#">Next</a>
+					</li>
+				</ul>
+            </nav>
+			<div id="accordion" class="accordion-code">
+				<div class="card">
+				  <div class="card-header" id="headingSix">
+					<h4 class="mb-0">
+					  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+						<span class="fas"></span>Pagination HTML
+					  </button>
+					</h4>
+				  </div>
+			<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+			<div class="card-body">
+<pre>
+<code><span style="color:#008000; font-weight: bold">&lt;nav</span><span style="color: #687621"> aria-label=</span> <span style="color: #BA2121">"Page navigation example"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;ul</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"pagination"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-item"</span><span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-link"</span> <span style="color: #687621">href=</span><span style="color: #BA2121">"#"</span><span style="color: #008000; font-weight: bold">&gt;</span>Previous<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li&gt;</span>		
+		<span style="color: #008000; font-weight: bold">&lt;li</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-item"</span><span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-link"</span> <span style="color: #687621">href=</span><span style="color: #BA2121">"#"</span><span style="color: #008000; font-weight: bold">&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-item active"</span><span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-link"</span> <span style="color: #687621">href=</span><span style="color: #BA2121">"#"</span><span style="color: #008000; font-weight: bold">&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li&gt;</span>		
+		<span style="color: #008000; font-weight: bold">&lt;li</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-item"</span><span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-link"</span> <span style="color: #687621">href=</span><span style="color: #BA2121">"#"</span><span style="color: #008000; font-weight: bold">&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-item"</span><span style="color: #008000; font-weight: bold">&lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"page-link"</span> <span style="color: #687621">href=</span><span style="color: #BA2121">"#"</span><span style="color: #008000; font-weight: bold">&gt;</span>Next<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+		<span style="color: #008000; font-weight: bold">&lt;li&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;/ul&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/nav&gt;</span></code>	
+</pre>
+</div>
+</div>
+</div>
+</div>  
+          
+<h3>Further reading</h3>
+			<ul>
+				<li> <a href="http://uxmovement.com/navigation/avoid-the-pains-of-pagination/" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Avoid the Pains of Pagination<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+				</li>
+				</ul>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<ul class="list-inline">
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="resources.html">
+                               Resources
+                            </a>
+				</li>
+				<li class="list-inline-item"> <a href="accessibility.html">
+                               Accessibility
+                          </a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+	<script src="js/progressive-disclosure.js"></script>
+</body>
+
+</html>

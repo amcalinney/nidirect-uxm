@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Page layout | User Experience Model (UXM) | nidirect</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.ico" />
+	<!-- Bootstrap -->
+	<!--  <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">  -->
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+        <div class="container skip-link">
+                <a class="btn-skip-link" href="#main-content">Skip to content</a>
+            </div>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark">
+				<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="principles.html">Principles</a>
+						</li>
+						<li class="nav-item"> <a class="nav-link" href="usability-testing.html">Usability testing</a>
+						</li>
+						<li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Style guide <span class="sr-only">(current)</span>
+                         </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="applying-uxm.html">Applying the UXM</a>
+								<a class="dropdown-item" href="writing-guide.html">Writing guide</a>
+								<a class="dropdown-item active" href="page-layout.html">Page layout <span class="sr-only">(current)</span></a>
+							</div>
+						</li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Controls
+                         </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="input-controls.html">Input controls</a>
+								<a class="dropdown-item" href="navigation-controls.html">Navigation controls</a>
+								<a class="dropdown-item" href="information-controls.html">Information controls</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Design patterns
+                         </a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="control-patterns.html">Control patterns</a>
+								<a class="dropdown-item" href="information-patterns.html">Information patterns</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav> <span class="nidirect-logo"><span class="sr-only">(n i direct government services)</span></span>
+		</div>
+		<!--service name-->
+		<div class="jumbotron jumbotron-fluid service-name">
+			<div class="container"> <span>User Experience Model (v3.0)</span>
+			</div>
+		</div>
+	</header>
+	<main id="main">
+		<div class="container">
+            <h1 id="main-content">Page layout</h1>
+
+        <ul>
+            <li>
+                <a href="#design">Design theme</a>
+            </li>
+            <li>
+                <a href="#layout">Responsive layout</a>
+            </li>
+            <li>
+                <a href="#sections">Sections</a>
+            </li>
+            <li>
+                <a href="#headings">Headings</a>
+            </li>
+        </ul>
+
+        <h2 id="design" class="uxm">Design theme</h2>
+        <ul>
+            <li>
+                The current
+                <abbr title="User Interface">UI</abbr>
+                theme for nidirect is flat, square and minimal
+            </li>
+            <li>3D design such as rounded corners, gradients and shadows should be avoided (except where presented in this guide)</li>
+            <li>The UXM is based on Bootstrap (v 3.3.7)</li>
+        </ul>
+
+        <h2 id="layout" class="uxm">Responsive layout</h2>
+
+        <ul>
+            <li>
+                Three main layouts for the UXM are currently available, dependent on the available width of the device/window:
+                <ul>
+                    <li>Large (992px and up)</li>
+                    <li>Medium (767px and below)</li>
+                    <li>Small (480px and below)</li>
+                </ul>
+            </li>
+            <li>
+                These breakpoints match the breakpoints used in the responsive Bootstrap (v 3.3.7) layout, with the exception of the '1200px and up' layout
+            </li>
+            <li>
+                The '1200px and up' layout is not required and should be excluded. If there are strong reasons why a layout larger than 992px is required then you must liaise with the
+                <a href="resources.html#contacts">nidirect Transactional Services Manager</a>.
+            </li>
+        </ul>
+
+        <h2 id="sections" class="uxm">Sections</h2>
+
+        <h3>Head section</h3>
+        <ul>
+            <li>
+                The page/window title must include the page name, service name and 'nidirect':</li>
+<pre><code><span style="color: #008000; font-weight: bold">&lt;title&gt;</span>[page name] | [service name] | nidirect<span style="color: #008000; font-weight: bold">&lt;/title&gt;</span>
+</code></pre>
+            
+            <li>The [page name] for the page/window title must be the same as the primary heading on each page</li>
+            <li>
+                The starting point for an nidirect transactional service is a page on the www.nidirect.gov.uk core site. Content on transactional services should not be indexed by search engines. Each page must include a 'noindex, nofollow' instruction for robots. A robots.txt file can be used as an alternative. If the transactional service contains genuine indexable content then please liaise with the
+                <a href="resources.html#contacts">nidirect Transactional Services Manager</a></li>
+<pre><code><span style="color: #008000; font-weight: bold">&lt;meta</span> <span style="color: #687621">name=</span><span style="color: #BA2121">&quot;robots&quot;</span> <span style="color: #687621">content=</span><span style="color: #BA2121">&quot;noindex, nofollow&quot;</span> <span style="color: #008000; font-weight: bold">/&gt;</span> 
+</code></pre>
+            
+            <li>
+                Each page must include the nidirect <a href="favicon.ico">favicon</a>:</li>
+<pre><code><span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #687621">rel=</span><span style="color: #BA2121">&quot;icon&quot;</span> <span style="color: #687621">type=</span><span style="color: #BA2121">&quot;image/vnd.microsoft.icon&quot;</span> <span style="color: #687621">href=</span><span style="color: #BA2121">&quot;favicon.ico&quot;</span> <span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #687621">rel=</span><span style="color: #BA2121">&quot;shortcut icon&quot;</span> <span style="color: #687621">type=</span><span style="color: #BA2121">&quot;image/x-icon&quot;</span> <span style="color: #687621">href=</span><span style="color: #BA2121">&quot;favicon.ico&quot;</span> <span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;link</span> <span style="color: #687621">rel=</span><span style="color: #BA2121">&quot;apple-touch-icon&quot;</span> <span style="color: #687621">href=</span><span style="color: #BA2121">&quot;favicon.ico&quot;</span> <span style="color: #008000; font-weight: bold">/&gt;</span> 
+</code></pre>
+            
+        </ul>
+
+        <h3>Top navigation</h3>
+        <ul>
+            <li>Used to present utility links and other navigation (eg Shopping basket, Log-in / register)</li>
+            <li>Uses a modified version of the 'Responsive navbar' in Bootstrap (v3.3.7)</li>
+            <li>Links should always have link text (i.e. there should not be images or icons only)</li>
+            <li>
+                Top navigation items must be agreed with the
+                <a href="resources.html#contacts">nidirect Transactional Services Manager</a>
+            </li>
+            <li>The number of links must be kept to a minimum</li>
+            <li>Static and supporting content (eg 'Contact us', 'Prices') should reside on the relevant pages of the nidirect core site (www.nidirect.gov.uk), where possible</li>
+            <li>The first link must be a 'home' link which links to the start page of the service</li>
+            <li>Font size must equate to 18px</li>
+            <li>Text colour must be #fff</li>
+            <li>
+                For the drop down menu:
+                <ul>
+                    <li>Links can be bundled into the drop down option when appropriate</li>
+                    <li>The label of the parent item should be clear and unambiguous</li>
+                    <li>The parent item must include the down arrow</li>
+                    <li>The link should be triggered on click or touch as opposed to hover</li>
+                </ul>
+            </li>
+        </ul>
+        <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-largenav-tab" data-toggle="tab" href="#nav-largenav" role="tab" aria-controls="nav-largenav" aria-selected="true">Large / medium</a>
+                  <a class="nav-item nav-link" id="nav-smallnav-tab" data-toggle="tab" href="#nav-smallnav" role="tab" aria-controls="nav-smallnav" aria-selected="false">Small</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-largenav" role="tabpanel" aria-labelledby="nav-largenav-tab">
+                        <img class="img-fluid d-block" src="images/topnav-large.png" alt="Large version of top navigation">
+                        <br>
+                        <ul>
+                            <li>Links must not wrap to additional lines</li>
+                            <li>Links must be right aligned</li>
+                            <li>Links must be vertically centered</li>
+                        </ul>
+                </div>
+                <div class="tab-pane fade" id="nav-smallnav" role="tabpanel" aria-labelledby="nav-smallnav-tab">
+                        <img class="img-fluid d-block" src="images/topnav-small.png" alt="Small version of top navigation">
+                        <br>
+                        <ul>
+                            <li>The top navigation changes to a menu button</li>
+                            <li>The top navigation items must expand and collapse when the menu button is triggered</li>
+                            <li>The menu button must be right aligned</li>
+                            <li>When the top navigation is collapsed the menu button should be vertically centered in the top navigation bar</li>
+                            <li>The menu button should not contain the word 'menu'</li>
+                        </ul>
+                </div>
+              </div>
+
+
+        
+
+        <h3>nidirect logo</h3>
+        <ul>
+            <li>Must be displayed on the left</li>
+            <li>Must have alt text "n i direct government services"</li>
+            <li>Block level elements should left align with the logo</li>
+            <li>Must be displayed at <code>133px</code> in width by <code>32px</code> in height</li>
+            <li>Must be vertically centered in the top navigation bar</li>
+        </ul>
+
+        <h3>Service name</h3>
+        <ul>
+            <li>The service name and exact wording must be agreed with the nidirect Transactional Services Manager</li>
+            <li>Must be displayed on the left</li>
+            <li>Must be displayed in a modified jumbtron with a color of <code>#e6e6e6</code></li>
+            <li>Must use the base font-family</li>
+            <li>Text colour must be <code>#0867af</code></li>
+            <li>Font size must equate to <code>27px</code></li>
+            <li>Padding-top and and padding-bottom must be <code>18px</code></li>
+        </ul>
+
+        <h3>Main body</h3>
+        <ul>
+            <li>This area is the primary focus of the transactional service</li>
+            <li>Users must be able to complete key tasks and actions using as few clicks as possible</li>
+            <li>Key actions should be positioned 'above the fold'</li>
+            <li>Secondary tasks and options should not detract from the key focus of the page</li>
+            <li>A single column layout must be considered for the medium and small layouts</li>
+        </ul>
+
+        <h3>Footer</h3>
+        <ul>
+            <li>
+                Used to present links to supplementary information. Additional links must be agreed with the
+                <a href="resources.html#contacts">nidirect Transactional Services Manager</a>
+            </li>
+            <li>Font size must equate to <code>18px</code></li>
+            <li>Text colour must be #337ab7</li>
+            <li>Background colour must be <code>#f0f0f0</code></li>
+            <li>Items must be left aligned</li>
+            <li>
+                Each items should be separated by a right border:</li>
+<pre><code><span style="color: #007700">border-right-color</span><span style="color: #333333">:</span> <span style="color: #0066BB; font-weight: bold">#555555</span><span style="color: #333333">;</span>
+<span style="color: #007700">border-right-style</span><span style="color: #333333">:</span> <span style="color: #007700">solid</span><span style="color: #333333">;</span>
+<span style="color: #007700">border-right-width</span><span style="color: #333333">:</span> <span style="color: #007700">1px</span><span style="color: #333333">;</span>
+</code></pre>
+            
+            <li>
+                Must contain the following links to the nidirect core website:
+                <ul>
+                    <li>
+                        <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+                        (http://www.nidirect.gov.uk/crown-copyright)
+                    </li>
+                    <li>
+                        <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+                        (http://www.nidirect.gov.uk/terms-and-conditions)
+                    </li>
+                    <li>
+                        <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+                        (http://www.nidirect.gov.uk/privacy)
+                    </li>
+                    <li>
+                        <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+                        (http://www.nidirect.gov.uk/cookies)
+                    </li>
+                </ul>
+            </li>
+            <li>
+                If there is any requirement for variation of these links (for example bespoke terms and conditions) this must be discussed with the
+                <a href="resources.html#contacts">nidirect Transactional Services Manager</a>
+            </li>
+        </ul>
+
+        <h3>Further reading</h3>
+        <ul>
+            <li>
+                <a href="http://uxmovement.com/navigation/why-hover-menus-do-users-more-harm-than-good/" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                    Why hover menus do users more harm than good (UX Movement)<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                </a>
+            </li>
+        </ul>
+
+        <h2 id="typography" class="uxm">Typography</h2>
+        <ul>
+            <li>
+                The base font stack for all elements, unless otherwise stated or presented, must be</li>
+<pre><code><span style="color: #008000; font-weight: bold">font-family</span><span style="color: #666666">:</span> <span style="color: #BA2121">&quot;Lato&quot;</span><span style="color: #666666">,</span><span style="color: #BA2121">&quot;Open Sans&quot;</span><span style="color: #666666">,</span><span style="color: #008000; font-weight: bold">sans-serif</span><span style="color: #666666">;</span>
+</code></pre>
+            
+            <li>The minimum font size, unless otherwise stated or presented, must be 18px</li>
+            <li>The base font colour for all text, unless otherwise stated or presented, is #222222</li>
+        </ul>
+
+        <h2 id="headings" class="uxm">Headings</h2>
+        <ul>
+            <li>Must follow a heading hierarchy</li>
+            <li>Heading font sizes must be set using relative units</li>
+            <li>The 1px border presented above each <code>&lt;h2&gt;</code> in this UXM is to improve readability and must not be included in a transactional service</li>
+            <li>Heading 1 font size must equate to 36px</li>
+            <li>Heading 2 font size must equate to 27px</li>
+            <li>Heading 3 font size must equate to 21px</li>
+        </ul>
+
+        <h3>Primary heading</h3>
+        <ul>
+            <li>There must be only one primary heading on each page</li>
+            <li>
+                Must be a <code>&lt;h1&gt;</code></li>
+<pre><code><span style="color: #008000; font-weight: bold">&lt;h1</span> <span style="color: #687621">id=</span><span style="color: #BA2121">&quot;main-content&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Primary heading<span style="color: #008000; font-weight: bold">&lt;/h1&gt;</span>
+</code></pre>
+            
+            <li>Must indicate the purpose of each page</li>
+            <li>Must be different on each page</li>
+            <li>Must be less than 8 words in length</li>
+            <li>
+                Should be the destination for "Skip navigation"</li>
+<pre><code><span style="color: #008000; font-weight: bold">&lt;div</span> <span style="color: #687621">class=</span><span style="color: #BA2121">&quot;skip-link&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">    &lt;a</span> <span style="color: #687621">class=</span><span style="color: #BA2121">&quot;element-invisible element-focusable&quot;</span> <span style="color: #687621">href=</span><span style="color: #BA2121">&quot;#main-content&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>Skip to content<span style="color: #008000; font-weight: bold">&lt;/a&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/div&gt;</span>
+</code></pre>
+            
+        </ul>
+
+        <h3>Introductory paragraph</h3>
+        <ul>
+            <li>Should explain the purpose of the page, where appropriate</li>
+            <li>
+                Should be marked up with <code>class="intro"</code></li>
+<pre><code><span style="color: #008000; font-weight: bold">&lt;p</span> <span style="color: #687621">class=</span><span style="color: #BA2121">&quot;intro&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>This is the introductory paragraph<span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+</code></pre>
+            
+        </ul>
+
+    
+    
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<ul class="list-inline">
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="resources.html">
+                               Resources
+                            </a>
+				</li>
+				<li class="list-inline-item"> <a href="accessibility.html">
+                               Accessibility
+                          </a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+</body>
+
+</html>

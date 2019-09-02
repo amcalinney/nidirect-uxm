@@ -1,0 +1,308 @@
+//Variables
+$body-bg:                   $white;
+$body-color:                $gray-900;
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:"Lato", "Open Sans", sans-serif;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:            $font-family-sans-serif;
+// stylelint-enable value-keyword-case
+
+$font-size-base: 1.8rem; //based upon html font size of 62.5% = 10px
+$line-height-base:            1.5;
+
+$h1-font-size: 3.6rem;
+$h2-font-size: 2.7rem;
+$h3-font-size: 2.4rem;
+$h4-font-size: 2.1rem;
+$h5-font-size: 2rem;
+$h6-font-size: 1.9rem;
+
+$headings-margin-bottom:      1.35rem;
+$headings-line-height:        1.35;
+
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+
+$small-font-size: 83.33%; //useed for help block in forms
+
+
+$hr-border-color:            $gray-800;
+
+
+$link-color:$teal;
+$link-hover-color:darken($teal, 15%);//#08416c used to be #05416f;
+
+$blockquote-small-color:      $gray-700;
+$blockquote-font-size:        $font-size-base;
+
+html {
+	font-family: sans-serif;
+	font-size: 62.5%;
+	line-height: 1.5;
+}
+body {
+	font-family: $font-family-sans-serif;
+	font-size: 1.8rem;
+	color: $gray-900;
+	background-color: $gray-200; 
+}
+
+main{
+	background-color:$white;
+	p {
+		margin-bottom: 1.35rem !important;
+	}
+	p.intro{
+		font-size: 2.1rem;
+		font-weight: $font-weight-bold;
+	}
+	h1 {
+		padding-top: 2.7rem;
+	
+	}
+	h2 {
+		padding-top: 2.4rem;
+
+	}
+	h3 {
+		padding-top: 2.4rem;
+		margin-bottom:0.7rem !important;
+
+	}
+	h4 {
+		margin-bottom:0.7rem !important;
+		padding-top: 1.25rem;
+
+	}
+	h5 {
+		margin-bottom:0.4rem !important;
+		padding-top: 1.25rem;
+	}
+	h6 {
+		margin-bottom:0.4rem !important;
+		padding-top: 1.25rem;
+	}
+	.uxm {
+		padding-top: 1.8rem;
+		margin-top:2.7rem;
+		border-top-color: $gray-800;
+		border-top-style: solid;
+		border-top-width: 1px;
+	}
+	//for index page to contain columns
+	.column-container{
+		padding-top:1.8rem;
+		padding-bottom:1.8rem;
+		border-width: 1px 0px 0px 0px;
+		border-style:solid;
+		border-color:$gray-800;
+	}
+	//for index page toolkit link button
+	.link-button{
+		background-color:$blue;
+		border:1px solid $blue;
+		padding:.9rem 1.8rem;
+		display:inline-block;
+		color:$white;
+		text-decoration: none;
+	}
+	.link-button:hover{
+		background-color:$blue-dk;
+		border-color:$blue-dk-border;
+		color:$white;
+		text-decoration: none;
+	}
+	blockquote{
+		padding:0.5rem 2.5rem;
+		border-left-color: $gray-500;
+		border-left-style: solid;
+		border-left-width: 2px;
+		margin-bottom:1.35rem;
+		background-color: $gray-100;
+	}
+	ul{
+		padding-left: 1.8rem;
+		margin-bottom: 1.35rem !important;
+		margin-top: 0;
+	}
+	ol {
+		padding-left: 1.8rem;
+		margin-bottom: 1.35rem !important;
+		margin-top: 0;
+	}
+	dl {
+ 		margin-top: 0;
+		dd{
+			margin-bottom:0.9rem !important;
+		}
+	}
+
+	//styling of summary list
+	dl.list-summary{
+		display:flex;
+		flex-wrap:wrap;
+		
+		dd{
+			flex:0 0 70%;
+			max-width: 70%;
+			border-bottom:1px solid $gray-500;
+			margin-bottom:0rem !important;
+			padding-top:.45rem;
+			padding-bottom:.45rem;
+			padding-left:1.5rem;
+			padding-right:1.5rem;  
+		}
+		
+		dt{
+			flex:0 0 30%;
+			max-width: 30%;
+			border-bottom:1px solid $gray-500;
+			padding-top:.45rem;
+			padding-bottom:.45rem;
+			padding-left:1.5rem; 
+			padding-right:1.5rem; 
+			}
+		
+	}
+	//styling of summary list on smaller screen sizes
+	@media screen and (max-width: 768px){
+		dl.list-summary{
+			
+			dd{
+				flex:0 0 100%;
+				max-width: 100%;
+				padding-top:0;
+			}
+			
+			dt{
+				flex:0 0 100%;
+				max-width: 100%;
+				border-bottom:none;
+				}
+		}
+	}
+
+	ul li:not(:last-child) {
+		padding-bottom: .6rem;
+	}
+	ol li:not(:last-child) {
+		padding-bottom: .6rem;
+	}
+	img {
+		vertical-align: middle;
+	}
+	img-fluid {
+		display: block;
+	}
+}
+.skip-link{
+	.btn-skip-link {
+		clip: rect(0.1rem,0.1rem,0.1rem,0.1rem);
+		height: 0.1rem;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		position: absolute;
+		width: 0.1rem;
+		padding:0;
+		margin:0;
+		border-width:0;
+		background-color: $secondary;
+		color:$gray-900;
+		text-decoration: none;
+	}
+
+	.btn-skip-link:active, .btn-skip-link:focus{ //styled to look like a secondary button
+		clip: auto;
+		height: auto;
+		overflow-x: auto;
+		overflow-y: auto;
+		position: static !important;
+		width: auto;
+		text-align: center;
+		padding:.9rem 1.8rem;
+		margin-top: .7rem;
+		border:1px solid $secondary;
+		display:inline-block;
+	}
+	.btn-skip-link:hover{
+		background-color: $grey-dk;
+		border:1px solid $grey-dk-border;
+		color: $gray-900;
+		text-decoration: none;
+	}
+}
+
+.element-focusable {
+	clip: rect(0.1rem,0.1rem,0.1rem,0.1rem);
+	height: 0.1rem;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: absolute;
+	width: 0.1rem;
+	padding:0;
+	margin:0;
+}
+.element-invisible {
+	clip: rect(0.1rem,0.1rem,0.1rem,0.1rem);
+	height: 0.1rem;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: absolute;
+	width: 0.1rem;
+}
+
+
+
+//external link icon
+span.elink{
+    display:inline-block;
+    width:1.4rem;
+    height:1.4rem;
+	background-color: transparent;
+	background-attachment: scroll;
+    //back up icon image for browsers that do not support svgs
+    background:url("../images/new-window-icon.png");
+    background-image: url("../images/new-window-icon.svg"), none;
+    background-size: auto auto;
+    background-position-x: 0;
+    background-position-y: 0;
+    padding-right:1.4rem;
+    background-repeat: no-repeat;
+    margin-left:0.4rem;
+}
+
+//information notice text block and icon
+p.info-notice{
+	display:inline-block;
+	width:auto;
+	margin:1.8rem 0rem;
+	border:1px solid $blue;
+	padding:1.4rem 1.4rem 1.4rem 6rem;
+	background-color: transparent;
+	background-attachment: scroll;
+    //back up icon image for browsers that do not support svgs
+    background:url("../images/info.png");
+    background-image: url("../images/info-icon.svg"), none;
+    background-size: 3rem 3rem;
+    background-position-x: 1.4rem;
+    background-position-y: 1.4rem;
+    background-repeat: no-repeat;
+}
+
+//preformatted text block for displaying code
+pre{
+    background-color: $gray-100;
+    display:block;
+    margin-top:0.6rem;
+    border:1px solid $gray-400;
+    border-left:5px solid $gray-800;
+    padding:1.8rem;
+    word-break:normal;
+    word-wrap: normal;
+    font-size:1.7rem !important;
+}

@@ -1,0 +1,71 @@
+//variables
+// Cards
+
+$card-spacer-y:                     1.2rem;
+$card-spacer-x:                     1.2rem;
+$card-border-width:                 1px;
+
+$card-border-color:                 $gray-500;
+
+$card-cap-bg:                       $blue-dk;
+$card-bg:                           $white;
+
+
+.accordion{
+    margin-bottom:2.7rem;
+
+    .card .card-header{
+        padding:0;
+        border-bottom-width: 0px;
+        h4{
+            margin:0;
+            padding-top:0;
+        }
+    }
+
+    .card{
+        margin-bottom:0.5rem;
+    }
+
+    .card .card-body{
+        border-top-width:0px;
+    }
+    //button used as heading to open and close accordian
+    .btn-accordion{
+        position:relative;
+        font-size:$h4-font-size;
+        color:$white;
+        background-color: transparent;
+        padding:.9rem 1.2rem;
+        display:block;
+        width:100%;
+        text-align: left;
+        cursor: pointer;
+        border:0;
+        border-radius:0;
+
+        //plus and minus icon posiitioning to top right 
+        span{
+            position:absolute;
+            top:.9rem;
+            right:1.2rem;
+            line-height:inherit;
+        }
+        //change icon to minus when opened
+        span::after{
+            content:"\f068";
+        }   
+    }
+    //change icon to plus when closed
+    .collapsed span::after{
+        content:"\f067";
+    }
+    //unopened header colour
+    .btn-accordion.collapsed{
+        background-color: $blue;
+    }
+    .btn-accordion:hover{
+        background-color: $blue-dk;
+    } 
+}
+

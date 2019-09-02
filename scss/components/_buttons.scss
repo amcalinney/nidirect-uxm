@@ -1,0 +1,22 @@
+//variables
+$btn-padding-y: 0.9rem;
+$btn-padding-x: 1.8rem;
+$btn-box-shadow: 0;
+
+//custom styles
+.btn-primary:hover {
+    background-color: $blue-dk;
+    border-color: $blue-dk-border;
+}
+.btn-secondary:hover {
+    background-color: $grey-dk;
+    border-color: $grey-dk-border;
+}
+.btn-success:hover {
+    background-color: $green-dk;
+    border-color: $green-dk-border;
+}
+.btn-danger:hover {
+    background-color: $red-dk;
+    border-color: $red-dk-border;
+}

@@ -1,0 +1,51 @@
+//custom calander for date picker
+.datepicker table tr td, .datepicker table tr th {
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+}
+th {
+    background-color: $blue-lg;
+}
+.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th {
+    padding: 5px;
+}
+.datepicker table tr td.today {
+    color: $black;
+    background-color: $orange;
+}
+
+.datepicker table tr td.day:hover, .datepicker table tr td.focused {
+    background: $gray-300;
+    cursor: pointer;
+}
+.datepicker table tr td.today:hover {
+    color: $black;
+    background-color: $orange-dk;
+}
+.datepicker-dropdown.datepicker-orient-top:after {
+    bottom: -0.6rem;
+    border-bottom: 0;
+    border-top: 0.6rem solid $white;
+}
+.datepicker-dropdown.dropdown-menu {
+    padding: 0.4rem;
+}
+.datepicker-dropdown:after {
+        content: '';
+        display: inline-block;
+        border-left: 0.66rem solid transparent;
+        border-right: 0.6rem solid transparent;
+        position: absolute;
+    }
+.datepicker-dropdown:before {
+        content: '';
+        display: inline-block;
+        border-left: 0.7rem solid transparent;
+        border-right: 0.7rem solid transparent;
+        position: absolute;
+    }
+.datepicker table tr td.new, .datepicker table tr td.old {
+        color: $gray-600;
+    }

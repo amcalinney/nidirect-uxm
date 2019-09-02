@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Information Controls | User Experience Model (UXM) | nidirect</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.ico" />
+	<!-- Bootstrap -->
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+		<div class="container skip-link">
+				<a class="btn-skip-link" href="#main-content">Skip to content</a>
+			</div>
+	<header>
+		<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+						<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="principles.html">Principles</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="usability-testing.html">Usability testing</a>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-style" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Style guide 
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-style"> <a class="dropdown-item active" href="applying-uxm.html">Applying the UXM </a>
+										<a class="dropdown-item" href="writing-guide.html">Writing guide</a>
+										<a class="dropdown-item" href="page-layout.html">Page layout</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-control" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Controls<span class="sr-only">(current)</span>
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-control"> <a class="dropdown-item" href="input-controls.html">Input controls</a>
+										<a class="dropdown-item" href="navigation-controls.html">Navigation controls</a>
+										<a class="dropdown-item active" href="information-controls.html">Information controls<span class="sr-only">(current)</span></a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-pattern" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								 Design patterns
+								 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-pattern"> <a class="dropdown-item" href="control-patterns.html">Control patterns</a>
+										<a class="dropdown-item" href="information-patterns.html">Information patterns</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav> <span class="nidirect-logo"><span class="sr-only">(n i direct government services)</span></span>
+				</div>
+		<!--service name-->
+		<div class="jumbotron jumbotron-fluid service-name">
+			<div class="container"> <span>User Experience Model (v3.0)</span>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+                <h1 id="main-content">Information Controls</h1>
+                <ul>
+                    <li> <a href="#legends"> Legends </a>
+                    </li>
+                    <li> <a href="#labels"> Labels </a> 
+                    </li>
+                    <li> <a href="#validation"> Validation </a>
+                    </li>
+                    <li> <a href="#help-content"> Help content </a>
+                    </li>
+                    <li> <a href="#information-notice"> Information notice </a>
+                    </li>
+                    <li> <a href="#tables"> Tables </a>
+                    </li>
+                </ul>
+                <h2 class="uxm" id="legends">Legends</h2>
+                <ul>
+                    <li >Must be used to group together logically related form controls</li>
+                    <li> Must be clear and unambiguous</li>
+                    <li> Font size must equate to 27px</li>
+                    <li> Must extend the full width of the available canvas</li>
+                    <li> Should include a 1px bottom border</li>
+                </ul>
+                <h3>Legends example</h3>
+                <form>
+                        <fieldset>
+                                <legend>Personal details</legend>
+                            </fieldset>
+                </form>
+                <h2 class="uxm" id="labels">Labels</h2>
+                <ul>
+                    <li> Must be explicity associated with its input element</li>
+                    <li> Must be positioned directly above text and drop down inputs</li>
+                    <li> Must be positioned to the right of radio button and checkbox inputs</li>
+                    <li> Must use #222 as the text colour</li>
+                    <li> Font size must equate to 18px</li>
+                    <li> Font weight must be 700</li>
+                    <li> Required information must include the <a href="images/required-icon.svg">required indicator</a> inside the label</li>
+                </ul>
+				<h3>Label example</h3>
+				<form>
+						<div class="form-group">
+							<label class="control-label" for="text-input">This is an example label for a form</label>
+							<input id="text-input" class="form-control" type="text" maxlength="50">
+						</div>
+						</form>
+				
+					<h2 class="uxm" id="validation">Validation</h2>
+                <ul>
+                    <li> A summary list of all errors must be presented at the top of the page</li>
+                    <li> Each error in the summary should link to the field that contains the error</li>
+                    <li> Error text must provide clear advice on how to fix the issue</li>
+					<li> When validation has been triggered the primary heading and title element must contain the word 'error'</li>
+				</ul>
+	
+				<ul>
+                    <li> Validation must be processed server side</li>
+                    <li> See example below for nidirect's styling and presentation requirements</li>
+				</ul>
+				<div id="accordion" class="accordion-code">
+						<div class="card">
+						  <div class="card-header" id="headingOne">
+							<h4 class="mb-0">
+							  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								<span class="fas"></span>Validation html
+							  </button>
+							</h4>
+						  </div>
+					  
+						  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+							<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;h1&gt;</span>[Primary heading] <span style="color: #008000; font-weight: bold">&lt;span</span> <span style="color: #687621">class=</span><span style="color: #BA2121">"heading-error"</span><span style="color: #008000; font-weight: bold">&gt;</span>error<span style="color: #008000; font-weight: bold">&lt;/span&gt;&lt;/h1&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;title&gt;</span>Error - [page name] | [service name] | nidirect<span style="color: #008000; font-weight: bold">&lt;/title&gt;</span>
+</pre>		
+</div>
+</div>
+</div>
+</div>					
+<h3>Client-side validation</h3>
+				<ul>
+						<li> Encouraged to help minimise server load</li>
+						<li> Real-time feedback is encouraged, providing it occurs after the user has answered the question</li>
+						<li> JavaScript popup messages should be avoided</li>
+						<li> Must be accessible and unobtrusive</li>
+					</ul>
+		<h2>Insert error content from DB</h2>
+		<h2 id="further-reading" class="uxm">Further reading</h2>
+			<ul>
+				<li> <a href="https://www.w3.org/TR/WCAG-TECHS/SCR32.html" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+					Providing client-side validation and adding error text via the DOM(W3C)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li> <a href="http://alistapart.com/article/inline-validation-in-web-forms/" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+					Inline Validation in Web Forms (A List Apart)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                            </a>
+				</li>
+				<li> <a href="https://en.wikipedia.org/wiki/Unobtrusive_JavaScript" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+					Unobtrusive JavaScript (Wikipedia)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+			</ul>
+			<h2 class="uxm" id="help-content">Help content</h2>
+			<ul>
+					<li> Essential information needed to complete the input, such as an expected format, must be positioned inside the label element</li>
+					<li> Supplementary help content should be presented using a progressive disclosure mechanism (eg a hide / reveal or tooltip) and positioned above the input in the
+						<abbr title="Document Object Model">DOM</abbr>
+					</li>
+					<li>Refer to the<a href="writing-guide.html#writing-help-text">writing help text</a>section for related guidance</li>
+				</ul>
+
+			<h3>Inline help example</h3>
+			<form>
+					<div class="form-group">
+							<label class="control-label" for="text-input1"><span class="required"><span class="sr-only">(required information)</span></span>Place of birth
+							<span class="help-block"> You must provide at least the town or city of birth</span>
+						</label>
+							<input id="text-input1" class="form-control" type="text" maxlength="50">
+						</div>
+			</form>
+			<h3>Progressive help example</h3>
+			<div class="form-group">
+					<a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;" style="display: block;"><span class="fas fa-angle-down"></span>Example of displaying help using progressive disclosure</a>
+					<div id="example" class="help-more" style="display: none;">
+						<a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;"><span class="fas fa-angle-up"></span>Example of displaying help using progressive disclosure</a>
+						<div class="help-content">
+							<p>Help text will go here</p>
+						</div>
+					</div>
+				</div>
+				<h2 class="uxm" id="information-notice">Information notice</h2>
+				<ul>
+						<li> Used to highlight important messages</li>
+						<li> Should be used sparingly</li>
+						</ul>
+				<h3>Information notice example</h3>
+				<p class="info-notice">After completing each stage your information is automatically saved.</p>		
+				<h2 class="uxm" id="tables">Tables</h2>
+				<ul>
+						<li> Should only be used to display data or structured information</li>
+						<li> Should not be used for layout purposes</li>
+						</ul>
+						<h3>Table examples</h3>
+						<h4>Column headings</h4>
+						<table class="table table-bordered">
+								<thead>
+								  <tr>
+								   
+									<th scope="col">Vehicle category</th>
+									<th scope="col">Vehicle description</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  <tr>
+									
+									<td>B + E</td>
+									<td>car and trailer</td>
+								  </tr>
+								  <tr>
+									
+									<td>C1 + E</td>
+									<td>medium sized goods vehicle and trailer</td>
+								  </tr>
+								  <tr>
+									
+									<td>C</td>
+									<td>large goods vehicle</td>
+								  </tr>
+								  <tr>
+									
+										<td>C + E</td>
+										<td>large goods vehicle and trailer</td>
+										</tr>
+										<tr>
+									
+												<td>D1 + E</td>
+												<td>minibus and trailer</td>
+												</tr>
+												<tr>
+									
+														<td>D + E</td>
+														<td>bus or coach and trailer</td>
+														</tr>
+								</tbody>
+							  </table>
+							  <h4>Column and row headings</h4>
+							  <table class="table table-bordered">
+									<thead>
+									  <tr>
+										<th scope="col">Items</th>
+										<th scope="col">Allowed in hand baggage?</th>
+										<th scope="col">Allowed in hold baggage?</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row">Corkscrew</th>
+										<td>no</td>
+										<td>yes</td>
+
+									  </tr>
+									  <tr>
+										<th scope="row">Spoon</th>
+										<td>yes</td>
+										<td>yes</td>
+
+									  </tr>
+									  <tr>
+										<th scope="row">Knife (with a sharp or pointed blade and/or a blade longer than 6cm)</th>
+										<td>no</td>
+										<td>yes (check with airline)</td>
+									  </tr>
+									  <tr>
+											<th scope="row">Small scissors (with blades no longer than 6cm)</th>
+											<td>yes</td>
+											<td>yes</td>
+										  </tr>
+										  <tr>
+												<th scope="row">Large scissors (with blades longer than 6cm)</th>
+												<td>no</td>
+												<td>yes (check with airline)</td>
+											  </tr>
+											  <tr>
+													<th scope="row">Round-ended/ blunt scissors (of any length)</th>
+													<td>yes</td>
+													<td>yes</td>
+												  </tr>
+												  <tr>
+														<th scope="row">Fixed-cartridge razor blades (disposable razor)</th>
+														<td>yes</td>
+														<td>yes</td>
+													  </tr>
+													  <tr>
+															<th scope="row">Nail clippers/ nail file</th>
+															<td>yes</td>
+															<td>yes</td>
+														  </tr>
+														  <tr>
+																<th scope="row">Tweezers</th>
+																<td>yes</td>
+																<td>yes</td>
+															  </tr>
+															  <tr>
+																	<th scope="row">Knitting needles</th>
+																	<td>yes</td>
+																	<td>yes</td>
+																  </tr>
+																  <tr>
+																		<th scope="row">Sewing needle</th>
+																		<td>yes</td>
+																		<td>yes</td>
+																	  </tr>
+																	  <tr>
+																			<th scope="row">Umbrella</th>
+																			<td>yes</td>
+																			<td>yes</td>
+																		  </tr>
+																		  <tr>
+																				<th scope="row">Umbrella</th>
+																				<td>yes</td>
+																				<td>yes</td>
+																			  </tr> 
+																			  <tr>
+																					<th scope="row">Walking stick/ cane, walking aid</th>
+																					<td>yes</td>
+																					<td>yes</td>
+																				  </tr> 
+																				  <tr>
+																						<th scope="row">Pushchair</th>
+																						<td>yes</td>
+																						<td>yes</td>
+																					  </tr> 
+																					  <tr>
+																							<th scope="row">Wheelchair</th>
+																							<td>yes</td>
+																							<td>yes</td>
+																						  </tr> 
+																						  <tr>
+																								<th scope="row">Safety matches</th>
+																								<td>yes</td>
+																								<td>no</td>
+																							  </tr>
+																							   <tr>
+																									<th scope="row">Non-safety matches</th>
+																									<td>no</td>
+																									<td>no</td>
+																								  </tr> 
+																								  <tr>
+																										<th scope="row">Fireworks, flares and other pyrotechnics, including party poppers and toy caps</th>
+																										<td>no</td>
+																										<td>no</td>
+																									  </tr> 
+																									  <tr>
+																											<th scope="row">Cigarette lighter</th>
+																											<td>no (but you can put a lighter in a plastic liquids bag and keep it on your person)</td>
+																											<td>no</td>
+																										  </tr>
+																										  <tr>
+																												<th scope="row">Contact lens solution</th>
+																												<td>yes (up to 100ml)</td>
+																												<td>yes</td>
+																											  </tr>
+									</tbody>
+								  </table>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<ul class="list-inline">
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="resources.html">
+                               Resources
+                            </a>
+				</li>
+				<li class="list-inline-item"> <a href="accessibility.html">
+                               Accessibility
+                          </a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+	<script src="js/controls-uxm.js"></script>
+</body>
+
+</html>

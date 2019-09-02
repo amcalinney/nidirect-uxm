@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow" />
+	<title>Input Controls | User Experience Model (UXM) | nidirect</title>
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="apple-touch-icon" href="favicon.ico" />
+	<!-- Bootstrap -->
+	<link href="fontawesome/css/all.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+		<div class="container skip-link">
+				<a class="btn-skip-link" href="#main-content">Skip to content</a>
+			</div>
+	<header>
+		<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-dark">
+						<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item"> <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="principles.html">Principles</a>
+								</li>
+								<li class="nav-item"> <a class="nav-link" href="usability-testing.html">Usability testing</a>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-style" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										   Style guide
+										   </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-style"> <a class="dropdown-item" href="applying-uxm.html">Applying the UXM</a>
+										<a class="dropdown-item" href="writing-guide.html">Writing guide</a>
+										<a class="dropdown-item" href="page-layout.html">Page layout</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-control" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										   Controls
+										   <span class="sr-only">(current)</span></a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-control"> <a class="dropdown-item active" href="input-controls.html">Input controls</a><span class="sr-only">(current)</span>
+										<a class="dropdown-item" href="navigation-controls.html">Navigation controls</a>
+										<a class="dropdown-item" href="information-controls.html">Information controls</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-pattern" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										   Design patterns
+										   </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown-pattern"> <a class="dropdown-item" href="control-patterns.html">Control patterns</a>
+										<a class="dropdown-item" href="information-controls.html">Information patterns</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav> <span class="nidirect-logo"><span class="sr-only">(n i direct government services)</span></span>
+		</div>
+		<!--service name-->
+		<div class="jumbotron jumbotron-fluid service-name">
+			<div class="container"> <span>User Experience Model (v3.0)</span>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<h1 id="main-content">Input controls</h1>
+			<ul>
+				<li> <a href="#text-inputs">Text inputs</a>
+				</li>
+				<li> <a href="#drop-downs"> Drop downs </a> 
+				</li>
+				<li> <a href="#radio-buttons"> Radio buttons </a>
+				</li>
+				<li> <a href="#check-boxes"> Checkboxes </a>
+				</li>
+				<li> <a href="#progressive-disclosure"> Progressive disclosure</a>
+				</li>
+			</ul>
+			<h2 id="text-inputs" class="uxm">Text inputs</h2>
+			<ul>
+				<li>Font size must equate to 18px (set using relative units)</li>
+				<li>Must use the base text colour</li>
+				<li>Must comply with the current nidirect UI theme, i.e. flat and square</li>
+				<li>Should not be presented over multiple columns</li>
+				<li>Should use the short class when appropriate (eg postcode)</li>
+			</ul>
+			<h3>Input examples</h3>
+			<form>
+				<fieldset>
+						<legend>Different text input examples</legend>
+				<div class="form-group" id="txtinput1">
+					<label class="control-label" for="text-input">Text input example</label>
+					<input id="text-input" class="form-control" type="text" maxlength="50">
+				</div>
+				<div class="form-group" id="txtinput2">
+					<label class="control-label" for="text-input-short">Text input example (short)</label>
+					<input id="text-input-short" class="form-control form-control-short" type="text" maxlength="50">
+				</div>
+				<div class="form-group" id="txtinput3">
+					<label class="control-label" for="text-input-multi">Text input example (multi line) <span id="remchars" class="help-block">500 characters maximum</span>
+					</label>
+					<textarea id="text-input-multi" class="form-control" rows="3" onfocus="return validateLimit(this, 'remchars', 500, 'focus')" onkeyup="return validateLimit(this, 'remchars', 500, 'keyup')" onchange="return validateLimit(this, 'remchars', 500, 'change')" onblur="lostfocus(this, 'remchars', 500)"></textarea>
+				</div>
+				</fieldset>
+			</form>
+			<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingOne">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							<span class="fas"></span>Text input HTML
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+						<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;form&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;fieldset&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;legend</span><span style="color: #008000; font-weight: bold">&gt;</span>Different text input examples<span style="color: #008000; font-weight: bold">&lt;/legend&gt;</span>
+	  <span style="color: #008000; font-weight: bold">&lt;div </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-group" </span><span style="color: #687621">id=</span><span style="color: #BA2121">"txt-input1"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+	    <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"text-input" </span><span style="color: #687621">for=</span><span style="color: #BA2121">"text-input"</span><span style="color: #008000; font-weight: bold">&gt;</span>Text input example<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+	    <span style="color: #008000; font-weight: bold">&lt;input </span><span style="color: #687621">id=</span><span style="color: #BA2121">"text-input-short" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-control" </span><span style="color: #687621">type=</span><span style="color: #BA2121">"text" </span><span style="color: #687621">maxlength=</span><span style="color: #BA2121">"50"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+	  <span style="color: #008000; font-weight: bold">&lt;/div</span><span style="color: #008000; font-weight: bold">&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;/fieldset&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/form&gt;</span>
+</pre>		
+</div>
+</div>
+</div>
+</div>
+			<h2 class="uxm">Further reading</h2>
+			<ul>
+				<li> <a href="http://css-tricks.com/box-sizing/" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                                Box sizing (CSS-tricks)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+			</ul>
+			<h2 id="drop-downs" class="uxm">Drop-downs</h2>
+			<ul>
+				<li>Must use the base font colour and font size</li>
+				<li>Should not be presented over multiple columns</li>
+				<li>Drop-downs are preferred when:
+					<ul>
+						<li>there are a large number of items (eg 5 or more)</li>
+						<li>the options can be easily guessed, i.e. they follow a conventional, obvious or sequential pattern (eg titles, countries, months, numbers)</li>
+					</ul>
+				</li>
+			</ul>
+			<h3>Drop-down example</h3>
+			<form>
+				<div class="form-group">
+					<label class="control-label" for="ddl_title">Title</label>
+					<select id="ddl_title" class="form-control form-control-short" name="ddl_title">
+						<option value="0">--- Select ---</option>
+						<option value="Mr">Mr</option>
+						<option value="Mrs">Mrs</option>
+						<option value="Miss">Miss</option>
+						<option value="Ms">Ms</option>
+						<option value="Dr">Dr</option>
+						<option value="Other">None</option>
+					</select>
+				</div>
+			</form>
+			<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingTwo">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<span class="fas"></span>Drop-down selection HTML
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+						<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;form&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;div </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-group"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"control-label" </span><span style="color: #687621">for=</span><span style="color: #BA2121">"ddl_title"</span><span style="color: #008000; font-weight: bold">&gt;</span>Title<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+      <span style="color: #008000; font-weight: bold">&lt;select </span><span style="color: #687621">id=</span><span style="color: #BA2121">"ddl_title" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-control form-control-short" </span><span style="color: #687621">name=</span><span style="color: #BA2121">"ddl_title"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"0"</span><span style="color: #008000; font-weight: bold">&gt;</span>--- Select ---<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>    
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"Mr"</span><span style="color: #008000; font-weight: bold">&gt;</span>Mr<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>  
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"Mrs"</span><span style="color: #008000; font-weight: bold">&gt;</span>Mrs<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>  
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"Miss"</span><span style="color: #008000; font-weight: bold">&gt;</span>Miss<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>  
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"Ms"</span><span style="color: #008000; font-weight: bold">&gt;</span>Ms<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>  
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"Dr"</span><span style="color: #008000; font-weight: bold">&gt;</span>Dr<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>  
+	  <span style="color: #008000; font-weight: bold">&lt;option </span><span style="color: #687621">value=</span><span style="color: #BA2121">"Other"</span><span style="color: #008000; font-weight: bold">&gt;</span>None<span style="color: #008000; font-weight: bold">&lt;/option&gt;</span>  	  
+      <span style="color: #008000; font-weight: bold">&lt;/select&gt;</span>  
+  <span style="color: #008000; font-weight: bold">&lt;/div</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/form&gt;</span>
+</pre>		
+</div>
+</div>
+</div>
+</div>
+			<h2 class="uxm">Further reading</h2>
+			<ul>
+				<li> <a href="http://baymard.com/blog/drop-down-usability" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                                Drop-down usability: when you should (and shouldn't) use them (Baymard Institute)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				</ul>
+			<h2 id="radio-buttons" class="uxm">Radio buttons</h2>
+			<p>Radio buttons can aid form filling as available options are permanently visible for users to easily consider them. They are preferred when:</p>
+			<ul>
+				<li>the answers are Yes or No</li>
+				<li>there are a small number of options (eg less than 5)</li>
+				<li>the options cannot be easily guessed, i.e. they do not follow a conventional, obvious or sequential pattern (eg Landlord type, Leasing type)</li>
+				<li>you want to emphasise options up front</li>
+				<li>the options are sentences</li>
+			</ul>
+			<h3>Radio button examples</h3>
+			<form>
+				<fieldset>
+					<legend class="legend-label">Radio button example horizontal</legend>
+					<div class="horizontal-check container d-flex flex-row">
+						<label class="form-check-label form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio">Yes</label>
+						<label class="form-check-label form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio">No</label>
+					</div>
+				</fieldset>
+				
+				<fieldset>
+					<legend class="legend-label">Radio button example horizontal</legend>
+					<div class="vertical-check container">
+						<label class=" form-check form-check-label">
+							<input type="radio" class="form-check-input" name="optradio">Yes</label>
+						<label class="form-check form-check-label">
+							<input type="radio" class="form-check-input" name="optradio">No</label>
+						<label class="form-check form-check-label">
+							<input type="radio" class="form-check-input" name="optradio">Don't know</label>
+					</div>
+				</fieldset>
+			</form>
+			<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingThree">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<span class="fas"></span>Radio button selection HTML
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+						<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;form&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;fieldset&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;legend</span><span style="color: #008000; font-weight: bold">&gt;</span>Radio button examples<span style="color: #008000; font-weight: bold">&lt;/legend&gt;</span>
+	  <span style="color: #008000; font-weight: bold">&lt;div </span><span style="color: #687621">class=</span><span style="color: #BA2121">"horizontal-check container d-flex flex-row"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"from-check-label from-check-inline"</span>
+              <span style="color: #008000; font-weight: bold">&lt;input </span><span style="color: #687621">type=</span><span style="color: #BA2121">"radio" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-check-input" </span><span style="color: #687621">name=</span><span style="color: #BA2121">"optradio"</span><span style="color: #008000; font-weight: bold">&gt;</span>Yes<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"from-check-label from-check-inline"</span>
+              <span style="color: #008000; font-weight: bold">&lt;input </span><span style="color: #687621">type=</span><span style="color: #BA2121">"radio" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-check-input" </span><span style="color: #687621">name=</span><span style="color: #BA2121">"optradio"</span><span style="color: #008000; font-weight: bold">&gt;</span>No<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+          <span style="color: #008000; font-weight: bold">&lt;/div</span><span style="color: #008000; font-weight: bold">&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;/fieldset&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/form&gt;</span>
+</pre>		
+</div>
+</div>
+</div>
+</div>
+			<h2 id="check-boxes" class="uxm">Checkboxes</h2>
+			<ul>
+				<li>Should be used if there is only one available option (eg confirming terms and conditions)</li>
+				<li>Should be given priority over a multiple select input)</li>
+			</ul>
+			<h3>Checkbox example</h3>
+			<form>
+				<fieldset>
+					<legend class="legend-label">Checkboxes</legend>
+					<div class="vertical-check container">
+						<label class=" form-check form-check-label">
+							<input type="checkbox" class="form-check-input" name="optcheck">One</label>
+						<label class="form-check form-check-label">
+							<input type="checkbox" class="form-check-input" name="optcheck">Two</label>
+						<label class="form-check form-check-label">
+							<input type="checkbox" class="form-check-input" name="optcheck">Three</label>
+					</div>
+				</fieldset>
+			</form>
+			<div id="accordion" class="accordion-code">
+					<div class="card">
+					  <div class="card-header" id="headingFour">
+						<h4 class="mb-0">
+						  <button class="btn-accordion-code collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							<span class="fas"></span>Checkbox HTML
+						  </button>
+						</h4>
+					  </div>
+				  
+					  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+						<div class="card-body">
+<pre><span style="color: #008000; font-weight: bold">&lt;form&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;fieldset&gt;</span>
+	<span style="color: #008000; font-weight: bold">&lt;legend</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #687621">class=</span><span style="color: #BA2121">"legend-label"</span>Checkboxes<span style="color: #008000; font-weight: bold">&lt;/legend&gt;</span>
+	  <span style="color: #008000; font-weight: bold">&lt;div </span><span style="color: #687621">class=</span><span style="color: #BA2121">"vertical-check containe"</span><span style="color: #008000; font-weight: bold">&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"from-check-form from-check-label"</span>
+              <span style="color: #008000; font-weight: bold">&lt;input </span><span style="color: #687621">type=</span><span style="color: #BA2121">"checkbox" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-check-input" </span><span style="color: #687621">name=</span><span style="color: #BA2121">"optcheck"</span><span style="color: #008000; font-weight: bold">&gt;</span>One<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"from-check-form from-check-label"</span>
+              <span style="color: #008000; font-weight: bold">&lt;input </span><span style="color: #687621">type=</span><span style="color: #BA2121">"radio" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-check-input" </span><span style="color: #687621">name=</span><span style="color: #BA2121">"optcheck"</span><span style="color: #008000; font-weight: bold">&gt;</span>Two<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+            <span style="color: #008000; font-weight: bold">&lt;label </span><span style="color: #687621">class=</span><span style="color: #BA2121">"from-check-form from-check-label"</span>
+              <span style="color: #008000; font-weight: bold">&lt;input </span><span style="color: #687621">type=</span><span style="color: #BA2121">"radio" </span><span style="color: #687621">class=</span><span style="color: #BA2121">"form-check-input" </span><span style="color: #687621">name=</span><span style="color: #BA2121">"optcheck"</span><span style="color: #008000; font-weight: bold">&gt;</span>Three<span style="color: #008000; font-weight: bold">&lt;/label&gt;</span>
+          <span style="color: #008000; font-weight: bold">&lt;/div</span><span style="color: #008000; font-weight: bold">&gt;</span>
+  <span style="color: #008000; font-weight: bold">&lt;/fieldset&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/form&gt;</span>
+</pre>		
+</div>
+</div>
+</div>
+</div>
+			<h2 id="further-reading" class="uxm">Further reading</h2>
+			<ul>
+				<li> <a href="http://www.nngroup.com/articles/checkboxes-vs-radio-buttons/" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                                Checkboxes vs. radio buttons (Nielsen Norman Group)
+                                <span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                            </a>
+				</li>
+				</ul>
+			<h2 class="uxm" id="progressive-disclosure">Progressive disclosure</h2>
+			<ul>
+				<li>Used to ask additional questions or more information based on the information already submitted</li>
+				<li>Written using Javascript</li>
+			</ul>
+			<h3>Progressive disclosure examples</h3>
+			<form>
+				<fieldset>
+					<legend class="legend-label">Progressive disclosure example (using radio buttons)</legend>
+					<div class="horizontal-check container flex-row">
+						<label class=" form-check-label form-check-inline" for="rbYes">
+							<input type="radio" class="form-check-input" name="optcheck" id="rbYes" onclick="rbProgDisclSelect();">Yes</label>
+						<label class=" form-check-label form-check-inline" for="rbNo">
+							<input type="radio" class="form-check-input" name="optcheck" id="rbNo" onclick="rbProgDisclSelect();">No</label>
+						<div class="form-group" id="txtProgDisclRBDiv" style="display: none;">
+							<label class="control-label" for="txtprog-discl">Additional question</label>
+							<input id="txtprog-discl" class="form-control" type="text" maxlength="50">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<form>
+				<fieldset>
+					<legend class="legend-label">Progressive disclosure example (using drop down)</legend>
+					<div class="form-group" id="ddProgDisclDiv">
+						<label class="control-label" for="ddlProgDiscl"> <span class="required"><span class="sr-only">(required information)</span></span>Select an option</label>
+						<select id="ddlProgDiscl" class="form-control form-control-short" name="ddlProgDiscl" onchange="ddlProgDisclSelect();">
+							<option value="0">--- Select ---</option>
+							<option value="Mr">Mr</option>
+							<option value="Mrs">Mrs</option>
+							<option value="Miss">Miss</option>
+							<option value="Ms">Ms</option>
+							<option value="Dr">Dr</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+					<div class="form-group" id="txtProgDisclDDDiv" style="display: none;">
+						<label class="control-label" for="txtProgDisclDD">Additional question</label>
+						<input id="txtProgDisclDD" class="form-control" type="text" maxlength="50">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<ul class="list-inline">
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/crown-copyright" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               &copy;  Crown copyright<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/terms-and-conditions" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                               Terms and conditions<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                           </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/privacy" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Privacy<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="http://www.nidirect.gov.uk/cookies" target="_blank" rel="nofollow" title="(external link opens in a new window / tab)">
+                            Cookies<span class="elink"><span class="sr-only">(external link opens in a new window / tab)</span></span>
+                        </a>
+				</li>
+				<li class="list-inline-item"> <a href="resources.html">
+                               Resources
+                            </a>
+				</li>
+				<li class="list-inline-item"> <a href="accessibility.html">
+                               Accessibility
+                          </a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap-4.3.1.js"></script>
+	<script src="js/controls-uxm.js"></script>
+</body>
+
+</html>

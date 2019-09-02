@@ -1,0 +1,81 @@
+//variables
+// Cards
+
+$card-spacer-y:                     1.2rem;
+$card-spacer-x:                     1.2rem;
+$card-border-width:                 1px;
+
+$card-border-color:                 $gray-500;
+
+$card-cap-bg:                       $blue-dk;
+$card-bg:                           $white;
+
+
+.accordion-code{
+    margin-bottom:2.7rem;
+
+    .card .card-header{
+        padding:0;
+        background-color: $gray-300;
+        border-bottom-width: 0px;
+        h4{
+            margin:0;
+            padding-top:0;
+        }
+    }
+
+    .card{
+        margin-bottom:0.5rem;
+        
+    }
+
+    .card .card-body{
+        border-top-width:0px;
+    }
+    span.fas {
+        padding-right: 1.2rem;
+    }
+    //button used as heading to open and close accordian
+    .btn-accordion-code{
+        position:relative;
+        font-size:$h4-font-size;
+        color:$black;
+        background-color: transparent;
+        padding:.9rem 1.2rem;
+        display:block;
+        width:100%;
+        text-align: left;
+        cursor: pointer;
+        border:0;
+        border-radius:0;
+
+ 
+        span::after{
+            content:"\f106";
+        }   
+        .example-html {
+            padding-left: 4rem;
+            margin-bottom: 0 !important;
+        }
+    }
+    //change icon to up chevron
+    .collapsed span::after{
+        content:"\f107";
+    }
+    //unopened header colour
+    .btn-accordion-code.collapsed{
+        background-color: $gray-300;
+    }
+    .btn-accordion-code:hover{
+        background-color: $gray-500;
+    } 
+    button:focus {
+        outline-color: $gray-500;
+
+    }
+    span{
+        content:"\f107";
+    }  
+}
+
+

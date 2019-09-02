@@ -1,0 +1,42 @@
+
+
+//import UXM themes
+@import "base/colours";
+
+@import "base/variables";
+
+@import "base/fontsDB";
+
+@import "layout/navigation";
+
+@import "components/jumbotron";
+
+@import "components/legends";
+
+@import "components/labels";
+
+@import "components/input-controls";
+
+@import "components/buttons";
+
+@import "components/calendar";
+
+@import "components/_accordian-code-snippet";
+
+@import "components/accordian";
+
+@import "components/figure";
+ 
+@import"components/pagination";
+
+@import "components/tables"; 
+
+ @import "layout/footer";  
+
+//import bootstrap default styles
+@import "bootstrap/scss/bootstrap";
+
+
+//delete after attributed to main variables
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+/*root html*/
